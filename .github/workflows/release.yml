@@ -1,0 +1,71 @@
+name: Release
+
+on:
+  push:
+    branches:
+      - main
+    paths-ignore:
+      - 'dist/**'
+
+permissions:
+  contents: write
+  packages: write
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v7
+        with:
+          fetch-depth: 0
+
+      - name: Setup Node
+        uses: actions/setup-node@v7
+        with:
+          node-version: latest
+          registry-url: https://npm.pkg.github.com
+          scope: "@sendelius"
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build
+        run: npm run build
+
+      - name: Commit dist
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          git add dist
+
+          if git diff --cached --quiet; then
+            echo "dist is already up to date"
+            exit 0
+          fi
+
+          git commit -m "chore: update dist [skip ci]"
+          git push origin main
+
+      - name: Sync with origin
+        run: |
+          git fetch origin main
+          git reset --hard origin/main
+
+      - name: Release
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          npx --yes \
+            -p semantic-release@25 \
+            -p @semantic-release/commit-analyzer@13 \
+            -p @semantic-release/release-notes-generator@14 \
+            -p @semantic-release/github@12 \
+            -p @semantic-release/npm@13 \
+            -p conventional-changelog-conventionalcommits@9 \
+            -p conventional-changelog-writer@9 \
+            -p conventional-changelog@8 \
+            semantic-release
