@@ -25,7 +25,8 @@ jobs:
         uses: actions/setup-node@v7
         with:
           node-version: latest
-          registry-url: https://registry.npmjs.org
+          registry-url: https://npm.pkg.github.com
+          scope: "@sendelius"
 
       - name: Install dependencies
         run: npm ci
