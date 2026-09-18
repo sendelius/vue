@@ -1,5 +1,6 @@
 {
   "name": "@sendelius/vue",
+  "version": "0.1.0",
   "type": "module",
   "module": "./dist/sendelius-vue.js",
   "types": "./dist/index.d.ts",
@@ -17,7 +18,9 @@
     "./style.css": "./dist/sendelius-vue.css"
   },
   "publishConfig": {
-    "registry": "https://npm.pkg.github.com"
+    "registry": "https://registry.npmjs.org",
+    "access": "public",
+    "provenance": true
   },
   "repository": {
     "type": "git",
