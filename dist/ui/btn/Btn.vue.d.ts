@@ -75,9 +75,9 @@ declare const __VLS_base: import('vue').DefineComponent<import('vue').ExtractPro
         default: boolean;
     };
 }>> & Readonly<{}>, {
-    size: string;
     href: string;
     to: string;
+    size: string;
     variant: string;
     hover: string;
     progressLabel: string;
