@@ -16,13 +16,6 @@
     },
     "./style.css": "./dist/sendelius-vue.css"
   },
-  "publishConfig": {
-    "registry": "https://npm.pkg.github.com"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/sendelius/vue.git"
-  },
   "peerDependencies": {
     "@vuepic/vue-datepicker": "^14.0.0",
     "axios": "^1.18.1",
