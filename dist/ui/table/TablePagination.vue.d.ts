@@ -1,7 +1,6 @@
 declare const component: __VLS_WithSlots<typeof __VLS_base, __VLS_Slots>;
-type __VLS_WithSlots<T, S> = T & (new () => {
-    $slots: S;
-});
+declare var __VLS_7: {};
+declare var __VLS_23: {};
 declare const __VLS_base: import('vue').DefineComponent<import('vue').ExtractPropTypes<{
     pagination: {
         type: ObjectConstructor;
@@ -24,10 +23,5 @@ declare const __VLS_base: import('vue').DefineComponent<import('vue').ExtractPro
     pagination: Record<string, any>;
     navigate: Function;
 }, {}, {}, {}, string, import('vue').ComponentProvideOptions, true, {}, any>;
-type __VLS_Slots = {
-    iconPaginationPrev?: (props: {}) => any;
-} & {
-    iconPaginationNext?: (props: {}) => any;
-};
 
 export default component;
