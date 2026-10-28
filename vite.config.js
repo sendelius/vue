@@ -21,6 +21,10 @@ export default defineConfig({
         rollupOptions: {
             external: [
                 'vue',
+                'pinia',
+                'axios',
+                'maska',
+                'vue-router',
             ],
         },
     }
