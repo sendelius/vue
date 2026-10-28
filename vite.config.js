@@ -21,7 +21,6 @@ export default defineConfig({
         rollupOptions: {
             external: [
                 'vue',
-                'maska',
             ],
         },
     }
