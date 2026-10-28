@@ -1,7 +1,6 @@
 declare const component: __VLS_WithSlots<typeof __VLS_base, __VLS_Slots>;
-type __VLS_WithSlots<T, S> = T & (new () => {
-    $slots: S;
-});
+declare var __VLS_9: {};
+declare var __VLS_11: {};
 declare const __VLS_base: import('vue').DefineComponent<import('vue').ExtractPropTypes<{
     columns: {
         type: ArrayConstructor;
@@ -81,10 +80,5 @@ declare const __VLS_base: import('vue').DefineComponent<import('vue').ExtractPro
     sort: Record<string, any>;
     bulk: boolean;
 }, {}, {}, {}, string, import('vue').ComponentProvideOptions, true, {}, any>;
-type __VLS_Slots = {
-    iconHeaderSortDesc?: (props: {}) => any;
-} & {
-    iconHeaderSortAsc?: (props: {}) => any;
-};
 
 export default component;

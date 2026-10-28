@@ -1,7 +1,6 @@
 declare const component: __VLS_WithSlots<typeof __VLS_base, __VLS_Slots>;
-type __VLS_WithSlots<T, S> = T & (new () => {
-    $slots: S;
-});
+declare var __VLS_1: {};
+declare var __VLS_31: {};
 declare const __VLS_base: import('vue').DefineComponent<import('vue').ExtractPropTypes<{
     modelValue: {
         type: StringConstructor;
@@ -80,10 +79,5 @@ declare const __VLS_base: import('vue').DefineComponent<import('vue').ExtractPro
     timePicker: boolean;
     classMenu: string;
 }, {}, {}, {}, string, import('vue').ComponentProvideOptions, true, {}, any>;
-type __VLS_Slots = {
-    before?: (props: {}) => any;
-} & {
-    after?: (props: {}) => any;
-};
 
 export default component;

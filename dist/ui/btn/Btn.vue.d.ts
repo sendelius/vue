@@ -1,7 +1,7 @@
 declare const component: __VLS_WithSlots<typeof __VLS_base, __VLS_Slots>;
-type __VLS_WithSlots<T, S> = T & (new () => {
-    $slots: S;
-});
+declare var __VLS_12: {};
+declare var __VLS_19: {};
+declare var __VLS_26: {};
 declare const __VLS_base: import('vue').DefineComponent<import('vue').ExtractPropTypes<{
     href: {
         type: StringConstructor;
@@ -84,12 +84,5 @@ declare const __VLS_base: import('vue').DefineComponent<import('vue').ExtractPro
     progressShow: boolean;
     withIcon: boolean;
 }, {}, {}, {}, string, import('vue').ComponentProvideOptions, true, {}, any>;
-type __VLS_Slots = {
-    default?: (props: {}) => any;
-} & {
-    default?: (props: {}) => any;
-} & {
-    default?: (props: {}) => any;
-};
 
 export default component;
