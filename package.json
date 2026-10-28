@@ -21,12 +21,14 @@
     "url": "git+https://github.com/sendelius/vue.git"
   },
   "peerDependencies": {
+    "vue": "^3.5.40"
+  },
+  "dependencies": {
     "@vuepic/vue-datepicker": "^14.0.0",
     "axios": "^1.18.1",
-    "pinia": "^4.0.2",
+    "date-fns": "^4.4.0",
     "maska": "^3.2.0",
-    "vue": "^3.5.40",
-    "date-fns": "^4.4.0"
+    "pinia": "^4.0.2"
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^6.0.8",
