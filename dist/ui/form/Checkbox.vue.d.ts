@@ -57,9 +57,9 @@ declare const __VLS_base: import('vue').DefineComponent<import('vue').ExtractPro
 }>> & Readonly<{
     "onUpdate:modelValue"?: (...args: any[]) => any;
 }>, {
+    value: string;
     label: string;
     required: boolean;
-    value: string;
     modelValue: string | boolean;
     disabled: boolean;
     error: string;

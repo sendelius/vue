@@ -1,1 +1,1 @@
-export { captcha } from './captcha.js';
+export { useCaptcha } from './store.js';
