@@ -78,7 +78,10 @@ async function we(e, t, n = {}, r = {}) {
 			...r
 		}) : await _e()[e](t, n, r);
 	} catch (e) {
-		throw e.response?.status === 401 && me().onUnauthorized?.(), new ve(e);
+		throw e.response?.status === 401 && me().onUnauthorized?.(), new ve({
+			status: e.response?.status ?? null,
+			data: e.response?.data ?? null
+		});
 	}
 	let a = i.data;
 	if (a?.status !== "success") throw new ve({
