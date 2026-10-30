@@ -42,9 +42,13 @@ var ae = Object.defineProperty, oe = Object.getOwnPropertyDescriptor, se = Objec
 	if (!he) throw Error("@sendelius/vue: initApi() должен быть запущен до getClient().");
 	return he;
 }, ve = class extends Error {
-	constructor(e) {
-		let t = e.response?.data;
-		super(t?.error ?? t?.message ?? "неизвестная ошибка"), this.name = "ApiError", this.status = e.response?.status ?? null, this.data = t ?? null, this.field = t?.field ?? null;
+	constructor({ status: e = null, data: t = null } = {}) {
+		let n = t?.error, r = {
+			code: n?.code ?? "UNKNOWN_ERROR",
+			message: n?.message ?? "неизвестная ошибка",
+			field: n?.field ?? null
+		};
+		super(r.message), this.name = "ApiError", this.status = e, this.data = t, this.error = r, this.field = r.field;
 	}
 };
 // src/core/requests.js
@@ -78,7 +82,6 @@ async function we(e, t, n = {}, r = {}) {
 	}
 	let a = i.data;
 	if (a?.status !== "success") throw new ve({
-		message: a?.error || a?.message || "неизвестная ошибка",
 		status: i.status,
 		data: a
 	});
