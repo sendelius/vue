@@ -1,3 +1,3 @@
 export {
-    captcha
-} from './captcha.js'
+    useCaptcha
+} from './store.js'
