@@ -41,7 +41,10 @@ export async function request(method, url, data = {}, config = {}) {
         if (error.response?.status === 401) {
             getConfig().onUnauthorized?.()
         }
-        throw new ApiError(error)
+        throw new ApiError({
+            status: error.response?.status ?? null,
+            data: error.response?.data ?? null
+        })
     }
 
     const responseData = response.data
