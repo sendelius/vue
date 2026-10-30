@@ -51,7 +51,7 @@ var ae = Object.defineProperty, oe = Object.getOwnPropertyDescriptor, se = Objec
 		super(r.message), this.name = "ApiError", this.status = e, this.data = t, this.error = r, this.field = r.field;
 	}
 };
-// src/core/requests.js
+// src/api/requests.js
 async function ye(e, t = {}, n = {}) {
 	return we("get", e, {
 		params: t,
@@ -90,7 +90,7 @@ async function we(e, t, n = {}, r = {}) {
 	});
 	return a;
 }
-// src/core/auth.js
+// src/auth/auth.js
 var Te = t("auth", {
 	state: () => ({
 		user: {},
@@ -150,7 +150,7 @@ var Te = t("auth", {
 function Ee() {
 	return Te();
 }
-// src/core/captcha.js
+// src/captcha/captcha.js
 async function De() {
 	let e = await Oe(), t = await Ae(e.challenge);
 	return ke(e.id, t);

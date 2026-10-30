@@ -1,4 +1,6 @@
 export * from './config';
-export * from './core';
+export * from './api';
+export * from './auth';
+export * from './captcha';
 export * from './helpers';
 export * from './ui';
