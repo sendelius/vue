@@ -1,4 +1,4 @@
-import {get, post} from './requests.js'
+import {get, post} from '../api/requests.js'
 
 export async function captcha() {
     const challenge = await create()

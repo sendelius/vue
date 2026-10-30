@@ -4,10 +4,6 @@ export {
 } from './api.js'
 
 export {
-    useAuth
-} from './auth.js'
-
-export {
     get,
     post,
     put,
@@ -19,7 +15,3 @@ export {
 export {
     ApiError
 } from './errors.js'
-
-export {
-    captcha
-} from './captcha.js'
