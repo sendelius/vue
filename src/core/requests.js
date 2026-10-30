@@ -47,7 +47,6 @@ export async function request(method, url, data = {}, config = {}) {
     const responseData = response.data
     if (responseData?.status !== 'success') {
         throw new ApiError({
-            message: responseData?.error || responseData?.message || 'неизвестная ошибка',
             status: response.status,
             data: responseData,
         })
