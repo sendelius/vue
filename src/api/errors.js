@@ -3,7 +3,7 @@ export class ApiError extends Error {
         const error = data?.error
 
         const normalizedError = {
-            code: error?.code  ?? 'UNKNOWN_ERROR',
+            code: error?.code ?? 'UNKNOWN_ERROR',
             message: error?.message ?? 'неизвестная ошибка',
             field: error?.field ?? null,
         }
