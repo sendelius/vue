@@ -11,6 +11,10 @@ permissions:
   contents: write
   id-token: write
 
+concurrency:
+  group: release-${{ github.ref }}
+  cancel-in-progress: false
+
 jobs:
   release:
     runs-on: ubuntu-latest
@@ -46,7 +50,9 @@ jobs:
           fi
 
           git commit -m "chore: update dist [skip ci]"
-          git push origin main
+
+          git pull --rebase origin main
+          git push origin HEAD:main
 
       - name: Sync with origin
         run: |
