@@ -19,6 +19,8 @@ var ae = Object.defineProperty, oe = Object.getOwnPropertyDescriptor, se = Objec
 }, de = (e, t, n) => (ue(e, t, "default"), n && ue(n, t, "default")), fe = {
 	router: null,
 	baseURL: "",
+	baseTitle: "",
+	baseTitleSeparator: " - ",
 	routeAfterLogin: "/app/",
 	routeAfterLogout: "/",
 	urlUserInfo: "/auth/me",
@@ -197,7 +199,7 @@ function Pe(e, t, n, r) {
 }
 // src/helpers/title.js
 function Fe(e, t, n) {
-	n ||= " - ", t || (n = ""), document.title = e ? `${e}${n}${t}` : t;
+	t ??= me().baseTitle, n ??= me().baseTitleSeparator, t || (n = ""), document.title = e ? `${e}${n}${t}` : t;
 }
 // src/helpers/objects.js
 function Ie(e) {
