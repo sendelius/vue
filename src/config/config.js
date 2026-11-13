@@ -1,6 +1,8 @@
 let config = {
     router: null,
     baseURL: '',
+    baseTitle: '',
+    baseTitleSeparator: ' - ',
     routeAfterLogin: '/app/',
     routeAfterLogout: '/',
     urlUserInfo: '/auth/me',
