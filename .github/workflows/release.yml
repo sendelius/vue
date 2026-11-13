@@ -11,10 +11,6 @@ permissions:
   contents: write
   id-token: write
 
-concurrency:
-  group: release-${{ github.ref }}
-  cancel-in-progress: false
-
 jobs:
   release:
     runs-on: ubuntu-latest
