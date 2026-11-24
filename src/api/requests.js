@@ -2,40 +2,16 @@ import {getClient} from './api.js'
 import {getConfig} from '../config/config.js'
 import {ApiError} from './errors.js'
 
-/* ----------------------------------- HTTP METHODS --------------------------------------- */
-export async function get(url, params = {}, config = {}) {
-    return request('get', url, { params, ...config })
-}
-
-export async function post(url, body = {}, config = {}) {
-    return request('post', url, body, config)
-}
-
-export async function put(url, body = {}, config = {}) {
-    return request('put', url, body, config)
-}
-
-export async function patch(url, body = {}, config = {}) {
-    return request('patch', url, body, config)
-}
-
-export async function remove(url, body = {}, config = {}) {
-    return request('delete', url, body, config)
-}
-
-/* ----------------------------------- MAIN REQUEST --------------------------------------- */
-export async function request(method, url, data = {}, config = {}) {
+async function request(method, url, data = {}, config = {}, client = 'default') {
+    const api = getClient(client)
     let response
     try {
         if (method === 'get') {
-            response = await getClient().get(url, data)
+            response = await api.get(url, { params: data, ...config })
         } else if (method === 'delete') {
-            response = await getClient().delete(url, {
-                data,
-                ...config,
-            })
+            response = await api.delete(url, { data, ...config })
         } else {
-            response = await getClient()[method](url, data, config)
+            response = await api[method](url, data, config)
         }
     } catch (error) {
         if (error.response?.status === 401) {
@@ -55,4 +31,15 @@ export async function request(method, url, data = {}, config = {}) {
         })
     }
     return responseData
+}
+
+export function useApi(client = 'default') {
+    return {
+        get: (url, body = {}, config = {}) => request('get', url, body, config, client),
+        post: (url, body = {}, config = {}) => request('post', url, body, config, client),
+        put: (url, body = {}, config = {}) => request('put', url, body, config, client),
+        patch: (url, body = {}, config = {}) => request('patch', url, body, config, client),
+        remove: (url, body = {}, config = {}) => request('delete', url, body, config, client),
+        request: (method, url, data = {}, config = {}) => request(method, url, data, config, client),
+    }
 }

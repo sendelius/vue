@@ -1,9 +1,11 @@
 let config = {
     router: null,
-    baseURL: '',
+    api: {
+        default: '',
+    },
     baseTitle: '',
     baseTitleSeparator: ' - ',
-    routeAfterLogin: '/app/',
+    routeAfterLogin: '/',
     routeAfterLogout: '/',
     urlUserInfo: '/auth/me',
     urlLogin: '/auth/login',

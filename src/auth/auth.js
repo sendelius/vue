@@ -1,6 +1,8 @@
 import {defineStore} from 'pinia'
-import {get, post, remove} from "../api/requests.js"
+import {useApi} from '../api/requests.js'
 import {getConfig} from "../config/config.js"
+
+const { get, post, remove } = useApi('auth')
 
 const useAuthStore = defineStore('auth', {
     state: () => ({

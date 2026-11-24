@@ -1,4 +1,6 @@
-import {get, post} from '../api/requests.js'
+import {useApi} from '../api/requests.js'
+
+const { get, post } = useApi('auth')
 
 export async function captcha() {
     const challenge = await create()
