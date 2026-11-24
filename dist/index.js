@@ -21,15 +21,29 @@ import { ref as y } from "vue";
 var b = {
 	router: null,
 	api: { default: "" },
-	baseTitle: "",
-	baseTitleSeparator: " - ",
-	routeAfterLogin: "/",
-	routeAfterLogout: "/",
-	urlUserInfo: "/auth/me",
-	urlLogin: "/auth/login",
-	urlLogout: "/auth/logout",
-	onUnauthorized: null,
-	onLogout: null
+	endpoints: {
+		auth: {
+			me: "/v1/auth/me",
+			login: "/v1/auth/login",
+			logout: "/v1/auth/logout"
+		},
+		captcha: {
+			challenge: "/v1/captcha/challenge",
+			verify: "/v1/captcha/verify"
+		}
+	},
+	title: {
+		default: "",
+		separator: " - "
+	},
+	redirects: {
+		afterLogin: "/",
+		afterLogout: "/"
+	},
+	callbacks: {
+		onUnauthorized: null,
+		onLogout: null
+	}
 }, x = (e = {}) => {
 	b = {
 		...b,
@@ -75,7 +89,7 @@ async function D(e, t, n = {}, r = {}, i = "default") {
 			...r
 		}) : await a[e](t, n, r);
 	} catch (e) {
-		throw e.response?.status === 401 && S().onUnauthorized?.(), new E({
+		throw e.response?.status === 401 && S().callbacks.onUnauthorized?.(), new E({
 			status: e.response?.status ?? null,
 			data: e.response?.data ?? null
 		});
@@ -113,7 +127,7 @@ var { get: k, post: A, remove: j } = O("auth"), M = v("auth", {
 		async init(e = !0) {
 			if (this.isInit && e) return this.isAuth;
 			try {
-				let e = await k(S().urlUserInfo);
+				let e = await k(S().endpoints.auth.me);
 				e?.user ? (this.user = e.user, this.avatar = e.user.avatar ?? this.avatar, this.isAuth = !0) : this.clear();
 			} catch {
 				this.clear();
@@ -125,24 +139,24 @@ var { get: k, post: A, remove: j } = O("auth"), M = v("auth", {
 		async login(e, t, n) {
 			n ||= "";
 			try {
-				await A(S().urlLogin, {
+				await A(S().endpoints.auth.login, {
 					login: e,
 					password: t,
 					captcha: n
 				}), await this.init(!1);
 				let r = S().router;
-				return r && await r.push(S().routeAfterLogin), !0;
+				return r && await r.push(S().redirects.afterLogin), !0;
 			} catch (e) {
 				throw e;
 			}
 		},
 		async logout() {
 			try {
-				await j(S().urlLogout);
+				await j(S().endpoints.auth.logout);
 			} finally {
-				this.clear(), S().onLogout?.();
+				this.clear(), S().callbacks.onLogout?.();
 				let e = S().router;
-				e && await e.push(S().routeAfterLogout);
+				e && await e.push(S().redirects.afterLogout);
 			}
 		},
 		clear() {
@@ -164,10 +178,10 @@ async function I() {
 	return R(e.id, t);
 }
 async function L() {
-	return P("/captcha/challenge");
+	return P(S().endpoints.captcha.challenge);
 }
 async function R(e, t) {
-	return (await F("/captcha/verify", {
+	return (await F(S().endpoints.captcha.verify, {
 		id: e,
 		nonce: t
 	}))?.token;
@@ -205,7 +219,7 @@ function U(e, t, n, r) {
 }
 // src/helpers/title.js
 function W(e, t, n) {
-	t ??= S().baseTitle, n ??= S().baseTitleSeparator, t || (n = ""), document.title = e ? `${e}${n}${t}` : t;
+	t ??= S().title.default, n ??= S().title.separator, t || (n = ""), document.title = e ? `${e}${n}${t}` : t;
 }
 // src/helpers/objects.js
 function G(e) {

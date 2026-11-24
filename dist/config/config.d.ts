@@ -4,13 +4,27 @@ export function getConfig(): {
     api: {
         default: string;
     };
-    baseTitle: string;
-    baseTitleSeparator: string;
-    routeAfterLogin: string;
-    routeAfterLogout: string;
-    urlUserInfo: string;
-    urlLogin: string;
-    urlLogout: string;
-    onUnauthorized: any;
-    onLogout: any;
+    endpoints: {
+        auth: {
+            me: string;
+            login: string;
+            logout: string;
+        };
+        captcha: {
+            challenge: string;
+            verify: string;
+        };
+    };
+    title: {
+        default: string;
+        separator: string;
+    };
+    redirects: {
+        afterLogin: string;
+        afterLogout: string;
+    };
+    callbacks: {
+        onUnauthorized: any;
+        onLogout: any;
+    };
 };
