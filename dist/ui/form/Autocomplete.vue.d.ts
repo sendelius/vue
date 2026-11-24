@@ -1,10 +1,16 @@
 declare const component: __VLS_WithSlots<typeof __VLS_base, __VLS_Slots>;
-declare var __VLS_13: {};
-declare namespace __VLS_28 {
-    let item: any;
-    let index: number;
-}
-declare var __VLS_30: {};
+declare function __VLS_template(): {
+    __VLS_Slots: {
+        before?: (props: {}) => any;
+    } & {
+        default?: (props: {
+            item: any;
+            index: number;
+        }) => any;
+    } & {
+        empty?: (props: {}) => any;
+    };
+};
 declare const __VLS_base: import('vue').DefineComponent<import('vue').ExtractPropTypes<{
     modelValue: {
         type: (StringConstructor | NumberConstructor)[];

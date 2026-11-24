@@ -1,6 +1,11 @@
 declare const component: __VLS_WithSlots<typeof __VLS_base, __VLS_Slots>;
-declare var __VLS_8: {};
-declare var __VLS_10: {};
+declare function __VLS_template(): {
+    __VLS_Slots: {
+        iconEyeOff?: (props: {}) => any;
+    } & {
+        iconEyeOn?: (props: {}) => any;
+    };
+};
 declare const __VLS_base: import('vue').DefineComponent<import('vue').ExtractPropTypes<{
     modelValue: {
         type: StringConstructor;

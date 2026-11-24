@@ -1,7 +1,13 @@
 declare const component: __VLS_WithSlots<typeof __VLS_base, __VLS_Slots>;
-declare var __VLS_12: {};
-declare var __VLS_19: {};
-declare var __VLS_26: {};
+declare function __VLS_template(): {
+    __VLS_Slots: {
+        default?: (props: {}) => any;
+    } & {
+        default?: (props: {}) => any;
+    } & {
+        default?: (props: {}) => any;
+    };
+};
 declare const __VLS_base: import('vue').DefineComponent<import('vue').ExtractPropTypes<{
     href: {
         type: StringConstructor;
