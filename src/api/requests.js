@@ -15,7 +15,7 @@ async function request(method, url, data = {}, config = {}, client = 'default') 
         }
     } catch (error) {
         if (error.response?.status === 401) {
-            getConfig().onUnauthorized?.()
+            getConfig().callbacks.onUnauthorized?.()
         }
         throw new ApiError({
             status: error.response?.status ?? null,

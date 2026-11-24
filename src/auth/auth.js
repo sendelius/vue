@@ -22,7 +22,7 @@ const useAuthStore = defineStore('auth', {
             }
 
             try {
-                const data = await get(getConfig().urlUserInfo)
+                const data = await get(getConfig().endpoints.auth.me)
                 if (data?.user) {
                     this.user = data.user
                     this.avatar = data.user.avatar ?? this.avatar
@@ -41,12 +41,12 @@ const useAuthStore = defineStore('auth', {
         async login(login, password, captcha) {
             if (!captcha) captcha = ''
             try {
-                await post(getConfig().urlLogin, { login, password, captcha })
+                await post(getConfig().endpoints.auth.login, { login, password, captcha })
                 await this.init(false)
 
                 const router = getConfig().router
                 if (router) {
-                    await router.push(getConfig().routeAfterLogin)
+                    await router.push(getConfig().redirects.afterLogin)
                 }
 
                 return true
@@ -56,13 +56,13 @@ const useAuthStore = defineStore('auth', {
         },
         async logout() {
             try {
-                await remove(getConfig().urlLogout)
+                await remove(getConfig().endpoints.auth.logout)
             } finally {
                 this.clear()
-                getConfig().onLogout?.()
+                getConfig().callbacks.onLogout?.()
                 const router = getConfig().router
                 if (router) {
-                    await router.push(getConfig().routeAfterLogout)
+                    await router.push(getConfig().redirects.afterLogout)
                 }
             }
         },

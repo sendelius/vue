@@ -1,4 +1,5 @@
 import {useApi} from '../api/requests.js'
+import {getConfig} from "../config/index.ts";
 
 const { get, post } = useApi('auth')
 
@@ -9,11 +10,11 @@ export async function captcha() {
 }
 
 async function create() {
-    return get('/captcha/challenge')
+    return get(getConfig().endpoints.captcha.challenge)
 }
 
 async function verify(id, nonce) {
-    const response = await post('/captcha/verify', { id, nonce })
+    const response = await post(getConfig().endpoints.captcha.verify, { id, nonce })
     return response?.token
 }
 
