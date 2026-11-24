@@ -1,17 +1,26 @@
 declare const component: __VLS_WithSlots<typeof __VLS_base, __VLS_Slots>;
-declare var __VLS_26: `cell-${any}`;
-declare var __VLS_27: {
-    item: any;
-    value: any;
+declare function __VLS_template(): {
+    __VLS_Slots: {
+        [x: `cell-${any}`]: (props: {
+            item: any;
+            value: any;
+        }) => any;
+    } & {
+        iconHeaderSortDesc?: (props: {}) => any;
+    } & {
+        iconHeaderSortAsc?: (props: {}) => any;
+    } & {
+        actions?: (props: {
+            item: any;
+        }) => any;
+    } & {
+        iconPaginationPrev?: (props: {}) => any;
+    } & {
+        iconPaginationNext?: (props: {}) => any;
+    } & {
+        iconFooterActions?: (props: {}) => any;
+    };
 };
-declare var __VLS_10: {};
-declare var __VLS_13: {};
-declare var __VLS_30: {
-    item: any;
-};
-declare var __VLS_41: {};
-declare var __VLS_44: {};
-declare var __VLS_47: {};
 declare const __VLS_base: import('vue').DefineComponent<import('vue').ExtractPropTypes<{
     columns: {
         type: ArrayConstructor;

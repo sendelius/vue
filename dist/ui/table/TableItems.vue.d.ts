@@ -1,13 +1,16 @@
 declare const component: __VLS_WithSlots<typeof __VLS_base, __VLS_Slots>;
-declare var __VLS_11: `cell-${any}`;
-declare namespace __VLS_12 {
-    let item: any;
-    let value: any;
-}
-declare namespace __VLS_14 {
-    let item_1: any;
-    export { item_1 as item };
-}
+declare function __VLS_template(): {
+    __VLS_Slots: {
+        [x: `cell-${any}`]: (props: {
+            item: any;
+            value: any;
+        }) => any;
+    } & {
+        actions?: (props: {
+            item: any;
+        }) => any;
+    };
+};
 declare const __VLS_base: import('vue').DefineComponent<import('vue').ExtractPropTypes<{
     columns: {
         type: ArrayConstructor;

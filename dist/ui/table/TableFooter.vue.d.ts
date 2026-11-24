@@ -1,7 +1,13 @@
 declare const component: __VLS_WithSlots<typeof __VLS_base, __VLS_Slots>;
-declare var __VLS_1: {};
-declare var __VLS_15: {};
-declare var __VLS_18: {};
+declare function __VLS_template(): {
+    __VLS_Slots: {
+        iconFooterActions?: (props: {}) => any;
+    } & {
+        iconPaginationPrev?: (props: {}) => any;
+    } & {
+        iconPaginationNext?: (props: {}) => any;
+    };
+};
 declare const __VLS_base: import('vue').DefineComponent<import('vue').ExtractPropTypes<{
     columns: {
         type: ArrayConstructor;
