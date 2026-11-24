@@ -1,10 +1,13 @@
 {
   "name": "@sendelius/vue",
   "type": "module",
-  "module": "./dist/sendelius-vue.js",
+  "module": "./dist/index.js",
   "types": "./dist/index.d.ts",
   "files": [
     "dist"
+  ],
+  "sideEffects": [
+    "**/*.css"
   ],
   "scripts": {
     "build": "vite build && node fix-dts.mjs"
@@ -12,9 +15,8 @@
   "exports": {
     ".": {
       "types": "./dist/index.d.ts",
-      "import": "./dist/sendelius-vue.js"
-    },
-    "./style.css": "./dist/sendelius-vue.css"
+      "import": "./dist/index.js"
+    }
   },
   "repository": {
     "type": "git",
@@ -24,22 +26,23 @@
     "vue": "^3.5.44"
   },
   "dependencies": {
-    "@vuepic/vue-datepicker": "^14.0.0",
-    "axios": "^1.18.1",
+    "@vuepic/vue-datepicker": "^14.1.0",
+    "axios": "^1.21.1",
     "date-fns": "^4.4.0",
     "maska": "^3.2.0",
     "pinia": "^4.0.2",
-    "vue-router": "^5.2.0"
+    "vue-router": "^5.5.1"
   },
   "devDependencies": {
-    "@vitejs/plugin-vue": "^6.0.8",
-    "sass": "^1.104.0",
+    "@vitejs/plugin-vue": "^6.0.11",
+    "sass": "^1.108.2",
     "typescript": "5.9",
-    "vite": "^8.1.5",
+    "vite": "^8.3.8",
     "vite-plugin-dts": "^5.1.0",
+    "vite-plugin-lib-inject-css": "^2.2.2",
     "vue": "^3.5.40",
-    "vue-component-type-helpers": "^3.3.11",
-    "vue-tsc": "^3.3.11"
+    "vue-component-type-helpers": "^3.3.14",
+    "vue-tsc": "^3.3.14"
   },
   "allowScripts": {
     "@parcel/watcher@2.6.0": true,
