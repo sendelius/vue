@@ -4,12 +4,7 @@ export {
 } from './api.js'
 
 export {
-    get,
-    post,
-    put,
-    patch,
-    remove,
-    request
+    useApi
 } from './requests.js'
 
 export {
