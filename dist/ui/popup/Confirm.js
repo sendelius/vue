@@ -57,5 +57,5 @@ var d = { class: "confirm" }, f = { class: "confirm-actions" }, p = /*#__PURE__*
 			_: 1
 		}, 8, ["variant"])])]));
 	}
-}, [["__scopeId", "data-v-a607a673"]]);
+}, [["__scopeId", "data-v-3fb94df6"]]);
 export { p as default };

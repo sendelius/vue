@@ -79,5 +79,5 @@ var g = ["onMousedown", "onMouseenter"], _ = {
 			t.actions ? (d(), i("div", _, [m(l.$slots, "actions", { item: f }, void 0, !0)])) : r("", !0)
 		], 2))), 128));
 	}
-}, [["__scopeId", "data-v-dc170bfa"]]);
+}, [["__scopeId", "data-v-acb86dea"]]);
 export { v as default };

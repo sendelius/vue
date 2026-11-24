@@ -1,7 +1,9 @@
 export function configure(options?: {}): void;
 export function getConfig(): {
     router: any;
-    baseURL: string;
+    api: {
+        default: string;
+    };
     baseTitle: string;
     baseTitleSeparator: string;
     routeAfterLogin: string;

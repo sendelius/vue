@@ -140,8 +140,8 @@ var b = ["onClick"], x = { class: "table-row__sortable-title" }, S = "table-sort
 				onClick: (t) => L(e.key)
 			}, [
 				a("div", x, y(e.title), 1),
-				T.sort?.key === e.key && T.sort?.type === "desc" ? v(u.$slots, "iconHeaderSortDesc", {}, () => [p[0] ||= o("<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" class=\"table-header-icon\" data-v-4098575c><path d=\"M4 6l9 0\" data-v-4098575c></path><path d=\"M4 12l7 0\" data-v-4098575c></path><path d=\"M4 18l7 0\" data-v-4098575c></path><path d=\"M15 15l3 3l3 -3\" data-v-4098575c></path><path d=\"M18 6l0 12\" data-v-4098575c></path></svg>", 1)], !0, 0) : r("", !0),
-				T.sort?.key === e.key && T.sort?.type === "asc" ? v(u.$slots, "iconHeaderSortAsc", {}, () => [p[1] ||= o("<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" class=\"table-header-icon\" data-v-4098575c><path d=\"M4 6l7 0\" data-v-4098575c></path><path d=\"M4 12l7 0\" data-v-4098575c></path><path d=\"M4 18l9 0\" data-v-4098575c></path><path d=\"M15 9l3 -3l3 3\" data-v-4098575c></path><path d=\"M18 6l0 12\" data-v-4098575c></path></svg>", 1)], !0, 1) : r("", !0)
+				T.sort?.key === e.key && T.sort?.type === "desc" ? v(u.$slots, "iconHeaderSortDesc", {}, () => [p[0] ||= o("<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" class=\"table-header-icon\" data-v-6e19f0ae><path d=\"M4 6l9 0\" data-v-6e19f0ae></path><path d=\"M4 12l7 0\" data-v-6e19f0ae></path><path d=\"M4 18l7 0\" data-v-6e19f0ae></path><path d=\"M15 15l3 3l3 -3\" data-v-6e19f0ae></path><path d=\"M18 6l0 12\" data-v-6e19f0ae></path></svg>", 1)], !0, 0) : r("", !0),
+				T.sort?.key === e.key && T.sort?.type === "asc" ? v(u.$slots, "iconHeaderSortAsc", {}, () => [p[1] ||= o("<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" class=\"table-header-icon\" data-v-6e19f0ae><path d=\"M4 6l7 0\" data-v-6e19f0ae></path><path d=\"M4 12l7 0\" data-v-6e19f0ae></path><path d=\"M4 18l9 0\" data-v-6e19f0ae></path><path d=\"M15 9l3 -3l3 3\" data-v-6e19f0ae></path><path d=\"M18 6l0 12\" data-v-6e19f0ae></path></svg>", 1)], !0, 1) : r("", !0)
 			], 8, b)) : r("", !0), a("template", null, [s(y(e.title), 1)])], 16))), 128)),
 			t.actions ? (h(), i("div", {
 				key: 1,
@@ -153,5 +153,5 @@ var b = ["onClick"], x = { class: "table-row__sortable-title" }, S = "table-sort
 			style: f(A.value)
 		}, null, 4)], 64));
 	}
-}, [["__scopeId", "data-v-4098575c"]]);
+}, [["__scopeId", "data-v-6e19f0ae"]]);
 export { C as default };

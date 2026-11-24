@@ -70,5 +70,5 @@ var h = { class: "warning" }, g = { class: "warning-item" }, _ = { class: "warni
 			_: 1
 		}, 8, ["variant"])])) : n("", !0)]));
 	}
-}, [["__scopeId", "data-v-97bc8d98"]]);
+}, [["__scopeId", "data-v-9792c046"]]);
 export { x as default };

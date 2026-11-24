@@ -1,2 +1,2 @@
-export function initApi(): import('axios').AxiosInstance;
-export function getClient(): any;
+export function initApi(): {};
+export function getClient(name?: string): any;
