@@ -65,7 +65,7 @@ export default defineConfig({
                         return 'fonts/[name]-[hash][extname]'
                     }
 
-                    return 'assets/[name]-[hash][extname]'
+                    return '[name][extname]'
                 },
             },
         },
