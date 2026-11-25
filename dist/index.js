@@ -6,7 +6,7 @@ import i from "./ui/form/Autocomplete.js";
 import { t as a } from "./InputPhone-CTq4y49q.js";
 import o from "./ui/form/Select.js";
 import s from "./ui/form/InputCity.js";
-import { t as c } from "./InputDate-CRpVPH9p.js";
+import { t as c } from "./InputDate-B_pfZ3Fy.js";
 import l from "./ui/form/InputPassword.js";
 import u from "./ui/form/Checkbox.js";
 import d from "./ui/notice/Warning.js";

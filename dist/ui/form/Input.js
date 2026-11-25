@@ -88,5 +88,5 @@ var p = [
 			c(t.$slots, "after", {}, void 0, !0)
 		], 2));
 	}
-}, [["__scopeId", "data-v-03732987"]]);
+}, [["__scopeId", "data-v-12dfd7da"]]);
 export { g as default };
