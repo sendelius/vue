@@ -45,12 +45,6 @@ const classes = computed(() => [{
 
 <style scoped lang="scss">
 .btn {
-  --btn-color: var(--color-white, #ffffff);
-  --btn-bg: var(--color-primary, #2f80ed);
-  --btn-icon: var(--color-white, #ffffff);
-  --btn-progress-white: var(--color-white, #ffffff);
-  --btn-progress-primary: var(--color-primary, #2f80ed);
-  --btn-hover-bg: var(--color-primary-hover, #276fcf);
   // outline
   --btn-outline-color: var(--color-black, #000000);
   --btn-outline-border: var(--color-primary, #2f80ed);
@@ -86,8 +80,8 @@ const classes = computed(() => [{
   --btn-hover-green-bg: var(--color-green, #06a76a);
   --btn-hover-green-icon: var(--color-white, #ffffff);
 
-  color: var(--btn-color);
-  background: var(--btn-bg);
+  color: var(--snd-btn-color);
+  background: var(--snd-accent-primary);
   border-radius: 8px;
   display: flex;
   align-items: center;
@@ -95,22 +89,16 @@ const classes = computed(() => [{
   text-decoration: none;
   padding: 3px 10px;
   font-weight: 600;
-  border: 2px solid var(--btn-bg);
+  border: 2px solid var(--snd-accent-primary);
   cursor: pointer;
   height: 30px;
   min-width: 30px;
-  :deep(.icon).icon-fill {
-    fill: var(--btn-icon);
-  }
-  :deep(.icon).icon-stroke {
-    stroke: var(--btn-icon);
-  }
   :deep(.progress) {
-    --progress-border: var(--btn-progress-white);
+    --snd-progress: var(--snd-btn-color);
   }
   &:hover {
-    background: var(--btn-hover-bg);
-    border-color: var(--btn-hover-bg);
+    background: var(--snd-accent-primary-hover);
+    border-color: var(--snd-accent-primary-hover);
   }
   &.btn-big {
     height: 40px;
@@ -139,7 +127,7 @@ const classes = computed(() => [{
       stroke: var(--btn-outline-icon);
     }
     :deep(.progress) {
-      --progress-border: var(--btn-progress-primary);
+      --snd-progress: var(--snd-accent-primary);
     }
     &:hover {
       background: none;
@@ -164,7 +152,7 @@ const classes = computed(() => [{
       stroke: var(--btn-gray-icon);
     }
     :deep(.progress) {
-      --progress-border: var(--btn-progress-primary);
+      --snd-progress: var(--btn-progress-primary);
     }
     &:hover {
       background: var(--btn-gray-hover-bg);
