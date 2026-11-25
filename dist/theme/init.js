@@ -1,4 +1,4 @@
-// src/ui/theme/init.js
+// src/theme/init.js
 (() => {
 	let e = localStorage.getItem("theme") || (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
 	document.documentElement.setAttribute("data-theme", e);
