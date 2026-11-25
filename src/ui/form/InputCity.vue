@@ -117,8 +117,6 @@ defineExpose({
 
 <style scoped lang="scss">
 .input-city {
-  --input-city-small-color: var(--color-slate-light, #484e71);
-  --input-city-small-hover-color: var(--color-white-blue, #edf1ff);
   display: inline-flex;
   align-items: flex-start;
   gap: 10px;

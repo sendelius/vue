@@ -65,25 +65,14 @@ defineExpose({
 
 <style scoped lang="scss">
 .input {
-  --input-color: var(--color-black, #000000);
-  --input-bg: var(--color-white-blue-light, #f6f8ff);
-  --input-border: var(--color-gray-blue-medium, #b1b4c7);
-  --input-focus-border: var(--color-primary, #2f80ed);
-  --input-error: var(--color-red, #c10d18);
-  --input-label: var(--color-gray-blue, #747a9c);
-  --input-label-focus-color: var(--color-black, #000000);
-  --input-label-focus-bg: var(--color-gray-blue-lighter, #d5d8ea);
-  --input-label-disabled-color: var(--color-black-light, #777777);
-  --input-label-disabled-bg: var(--color-gray-blue-lightest, #dee2fb);
-  --input-height: 40px;
   position: relative;
   z-index: 1;
   input {
     width: 100%;
-    background: var(--input-bg);
-    border: 2px solid var(--input-border);
-    height: var(--input-height);
-    color: var(--input-color);
+    background: var(--snd-input);
+    border: 2px solid var(--snd-input-border);
+    height: var(--snd-input-height);
+    color: var(--snd-text-primary);
     padding: 0 5px;
     border-radius: 8px;
     outline: none;
@@ -91,7 +80,7 @@ defineExpose({
     z-index: 3;
     position: relative;
     &:focus {
-      border-color: var(--input-focus-border);
+      border-color: var(--snd-accent-primary);
     }
     &:disabled {
       opacity: 0.5;
@@ -109,16 +98,16 @@ defineExpose({
     &:-webkit-autofill:hover,
     &:-webkit-autofill:focus,
     &:-webkit-autofill:active {
-      -webkit-box-shadow: 0 0 0 1000px var(--input-bg) inset;
-      -webkit-text-fill-color: var(--input-color);
+      -webkit-box-shadow: 0 0 0 1000px var(--snd-input) inset;
+      -webkit-text-fill-color: var(--snd-text-primary);
       transition: background-color 9999s ease-in-out 0s;
     }
   }
   &.input-error {
     input {
-      border-color: var(--input-error);
+      border-color: var(--snd-input-error);
       &:focus {
-        border-color: var(--input-error);
+        border-color: var(--snd-input-error);
       }
     }
   }
@@ -127,18 +116,17 @@ defineExpose({
       &:focus ~ .label,
       &:not(:placeholder-shown) ~ .label {
         transform: translate(5px) translateY(-12px);
-        background: var(--input-label-focus-bg);
-        color: var(--input-label-focus-color);
+        background: var(--snd-input-label);
+        color: var(--snd-text-primary);
         z-index: 5;
         margin: 0;
       }
       &:disabled ~ .label {
-        background: var(--input-label-disabled-bg);
-        color: var(--input-label-disabled-color);
+        opacity: 0.5;
       }
     }
     .label {
-      color: var(--input-label);
+      color: var(--snd-text-secondary);
       pointer-events: none;
       align-items: center;
       padding: 0 5px;
@@ -155,7 +143,7 @@ defineExpose({
     }
   }
   .error {
-    color: var(--input-error);
+    color: var(--snd-input-error);
     text-align: left;
     padding: 0 7px;
     font-size: 11px;

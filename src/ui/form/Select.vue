@@ -67,30 +67,20 @@ defineExpose({
 
 <style scoped lang="scss">
 .select {
-  --select-color: var(--color-black, #000000);
-  --select-bg: var(--color-white-blue-light, #f6f8ff);
-  --select-border: var(--color-gray-blue-medium, #b1b4c7);
-  --select-focus-border: var(--color-primary, #2f80ed);
-  --select-error: var(--color-red, #c10d18);
-  --select-label-focus-color: var(--color-black, #000000);
-  --select-label-focus-bg: var(--color-gray-blue-lighter, #d5d8ea);
-  --select-label-disabled-color: var(--color-black-light, #777777);
-  --select-label-disabled-bg: var(--color-gray-blue-lightest, #dee2fb);
-  --select-height: var(--input-height, 40px);
   position: relative;
   select {
     width: 100%;
     cursor: pointer;
-    background: var(--select-bg);
-    border: 2px solid var(--select-border);
-    height: var(--select-height);
-    color: var(--select-color);
+    background: var(--snd-input);
+    border: 2px solid var(--snd-input-border);
+    height: var(--snd-input-height);
+    color: var(--snd-text-primary);
     padding: 0 5px;
     border-radius: 8px;
     outline: none;
     font-size: 0.9231rem;
     &:focus {
-      border-color: var(--select-focus-border);
+      border-color: var(--snd-accent-primary);
     }
     &:disabled {
       opacity: 0.5;
@@ -98,9 +88,9 @@ defineExpose({
   }
   &.select-error {
     select {
-      border-color: var(--select-error);
+      border-color: var(--snd-input-error);
       &:focus {
-        border-color: var(--select-error);
+        border-color: var(--snd-input-error);
       }
     }
   }
@@ -118,18 +108,17 @@ defineExpose({
       height: 21px;
       border-radius: 5px;
       transform: translate(5px) translateY(-12px);
-      background: var(--select-label-focus-bg);
-      color: var(--select-label-focus-color);
+      background: var(--snd-input-label);
+      color: var(--snd-text-primary);
       z-index: 2;
       margin: 0;
     }
     &.select-disabled .label {
-      background: var(--select-label-disabled-bg);
-      color: var(--select-label-disabled-color);
+      opacity: 0.5;
     }
   }
   .error {
-    color: var(--select-error);
+    color: var(--snd-input-error);
     text-align: left;
     padding: 0 7px;
     font-size: 0.8461rem;

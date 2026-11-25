@@ -123,33 +123,23 @@ watch(() => props.modelValue, value => {
 
 <style scoped lang="scss">
 .input-date {
-  --input-date-color: var(--color-black, #000000);
-  --input-date-bg: var(--color-white-blue-light, #f6f8ff);
-  --input-date-border: var(--color-gray-blue-medium, #b1b4c7);
-  --input-date-focus-border: var(--color-primary, #2f80ed);
-  --input-date-error: var(--color-red, #c10d18);
-  --input-date-label-focus-color: var(--color-black, #000000);
-  --input-date-label-focus-bg: var(--color-gray-blue-lighter, #d5d8ea);
-  --input-date-label-disabled-color: var(--color-black-light, #777777);
-  --input-date-label-disabled-bg: var(--color-gray-blue-lightest, #dee2fb);
-  --input-date-height: var(--input-height, 40px);
   position: relative;
   z-index: 1;
   :deep(.dp--input-icons) {
     padding: 0 6px;
   }
   :deep(input) {
-    background: var(--input-date-bg);
-    border: 2px solid var(--input-date-border);
+    background: var(--snd-input);
+    border: 2px solid var(--snd-input-border);
     width: 100%;
-    height: var(--input-date-height);
-    color: var(--input-date-color);
+    height: var(--snd-input-height);
+    color: var(--snd-text-primary);
     border-radius: 8px;
     outline: none;
     font-size: 0.9231rem;
     padding: 0 26px;
     &:focus {
-      border-color: var(--input-date-focus-border);
+      border-color: var(--snd-accent-primary);
     }
     &:disabled {
       opacity: 0.5;
@@ -158,16 +148,16 @@ watch(() => props.modelValue, value => {
     &:-webkit-autofill:hover,
     &:-webkit-autofill:focus,
     &:-webkit-autofill:active {
-      -webkit-box-shadow: 0 0 0 1000px var(--input-date-bg) inset;
-      -webkit-text-fill-color: var(--input-date-color);
+      -webkit-box-shadow: 0 0 0 1000px var(--snd-input) inset;
+      -webkit-text-fill-color: var(--snd-text-primary);
       transition: background-color 9999s ease-in-out 0s;
     }
   }
   &.input-error {
     :deep(input) {
-      border-color: var(--input-date-error);
+      border-color: var(--snd-input-error);
       &:focus {
-        border-color: var(--input-date-error);
+        border-color: var(--snd-input-error);
       }
     }
   }
@@ -185,14 +175,13 @@ watch(() => props.modelValue, value => {
       height: 21px;
       border-radius: 5px;
       transform: translate(5px) translateY(-12px);
-      background: var(--input-date-label-focus-bg);
-      color: var(--input-date-label-focus-color);
+      background: var(--snd-input-label);
+      color: var(--snd-text-primary);
       z-index: 3;
       margin: 0;
     }
     &.input-disabled .label {
-      background: var(--input-date-label-disabled-bg);
-      color: var(--input-date-label-disabled-color);
+      opacity: 0.5;
     }
   }
   &.input-required {
@@ -204,7 +193,7 @@ watch(() => props.modelValue, value => {
     }
   }
   .error {
-    color: var(--input-date-error);
+    color: var(--snd-input-error);
     text-align: left;
     padding: 0 7px;
     font-size: 0.8461rem;

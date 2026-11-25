@@ -75,7 +75,6 @@ const model = computed({
 
 <style scoped lang="scss">
 .input-password-control {
-  --input-password-control-icon: var(--color-black, #000000);
   position: absolute;
   top: 2px;
   right: 2px;
@@ -97,7 +96,7 @@ const model = computed({
     cursor: pointer;
     .input-password-control-icon {
       display: block;
-      stroke: var(--input-password-control-icon);
+      color: var(--snd-text-secondary);
     }
     &:hover {
       opacity: 0.8;

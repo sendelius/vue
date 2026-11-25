@@ -266,18 +266,13 @@ defineExpose({
   }
 }
 .autocomplete-dropdown {
-  --autocomplete-color: var(--color-black, #000000);
-  --autocomplete-bg: var(--color-white-blue-light, #f6f8ff);
-  --autocomplete-shadow: var(--color-slate-alpha-30, rgba(34, 60, 80, 0.3));
-  --autocomplete-hover-color: var(--color-white, #ffffff);
-  --autocomplete-hover-bg: var(--color-primary-hover, #276fcf);
   position: fixed;
   z-index: 50;
   text-align: left;
   border-radius: 8px;
-  background: var(--autocomplete-bg);
+  background: var(--snd-input);
   font-size: 0.9231rem;
-  box-shadow: 0 0 10px 0 var(--autocomplete-shadow);
+  box-shadow: var(--snd-shadow-secondary);
   display: flex;
   flex-direction: column;
   gap: 2px;
@@ -288,7 +283,7 @@ defineExpose({
     flex-direction: column;
     line-height: 1.1538rem;
     font-weight: 600;
-    color: var(--autocomplete-color);
+    color: var(--snd-text-primary);
     :deep(small) {
       font-size: 0.8461rem;
       font-weight: normal;
@@ -296,8 +291,8 @@ defineExpose({
     }
     &.active,
     &:hover {
-      background: var(--autocomplete-hover-bg);
-      color: var(--autocomplete-hover-color);
+      background: var(--snd-accent-primary);
+      color: var(--snd-text-white);
       border-radius: 5px;
       cursor: pointer;
       :deep(small) {
@@ -311,7 +306,7 @@ defineExpose({
         background: none;
         border-radius: 0;
         cursor: default;
-        color: var(--autocomplete-color);
+        color: var(--snd-text-primary);
       }
     }
   }

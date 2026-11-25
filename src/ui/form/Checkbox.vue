@@ -59,13 +59,6 @@ const validate = () => {
 
 <style scoped lang="scss">
 .checkbox {
-  --checkbox-label-color: var(--color-black, #000000);
-  --checkbox-border: var(--color-gray-blue-medium, #b1b4c7);
-  --checkbox-bg: var(--color-white-blue-light, #f6f8ff);
-  --checkbox-hover-border: var(--color-primary, #2f80ed);
-  --checkbox-checked-border: var(--color-primary, #2f80ed);
-  --checkbox-checked-bg: var(--color-primary, #2f80ed);
-  --checkbox-error: var(--color-red, #c10d18);
   label span {
     margin-left: 10px;
     line-height: 1.2308rem;
@@ -83,7 +76,7 @@ const validate = () => {
       align-items: center;
       user-select: none;
       cursor: pointer;
-      color: var(--checkbox-label-color);
+      color: var(--snd-text-primary);
       &:before {
         content: '';
         display: inline-block;
@@ -91,21 +84,21 @@ const validate = () => {
         height: 14px;
         flex-shrink: 0;
         flex-grow: 0;
-        border: 2px solid var(--checkbox-border);
+        border: 2px solid var(--snd-input-border);
         border-radius: 5px;
         background-repeat: no-repeat;
         background-position: center center;
         background-size: 60% 60%;
-        background-color: var(--checkbox-bg);
+        background-color: var(--snd-input);
         cursor: pointer;
       }
     }
     &:not(:disabled):not(:checked) + label:hover::before {
-      border-color: var(--checkbox-hover-border);
+      border-color: var(--snd-accent-primary);
     }
     &:checked + label::before {
-      border-color: var(--checkbox-checked-border);
-      background-color: var(--checkbox-checked-bg);
+      border-color: var(--snd-accent-primary);
+      background-color: var(--snd-accent-primary);
       background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3e%3cpath fill='%23fff' d='M6.564.75l-3.59 3.612-1.538-1.55L0 4.26 2.974 7.25 8 2.193z'/%3e%3c/svg%3e");
     }
     &:disabled + label::before {
@@ -115,12 +108,12 @@ const validate = () => {
   &.checkbox-error {
     input {
       &:not(:disabled):not(:checked) + label::before {
-        border-color: var(--checkbox-error);
+        border-color: var(--snd-input-error);
       }
     }
   }
   .error {
-    color: var(--checkbox-error);
+    color: var(--snd-input-error);
     text-align: left;
     padding: 3px 0 0 0;
     font-size: 0.8461rem;
