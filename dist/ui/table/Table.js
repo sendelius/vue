@@ -174,5 +174,5 @@ var x = {
 			])
 		], 512)], 4)) : (m(), i("div", x, v(r.textEmpty), 1));
 	}
-}, [["__scopeId", "data-v-ec7fece0"]]);
+}, [["__scopeId", "data-v-5bb29c0c"]]);
 export { S as default };
