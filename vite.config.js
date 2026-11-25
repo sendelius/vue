@@ -26,7 +26,6 @@ function getComponents(dir) {
 const entries = Object.fromEntries([
     ['index', resolve(root, 'src/index.ts')],
     ['style', resolve(root, 'src/style/index.scss')],
-    ['theme/init', resolve(root, 'src/theme/init.js')],
     ...getComponents(ui)
 ])
 
@@ -60,11 +59,9 @@ export default defineConfig({
             output: {
                 assetFileNames: (assetInfo) => {
                     const name = assetInfo.names?.[0] || assetInfo.name || ''
-
                     if (/\.(woff2?|ttf|otf)$/i.test(name)) {
                         return 'fonts/[name]-[hash][extname]'
                     }
-
                     return '[name][extname]'
                 },
             },

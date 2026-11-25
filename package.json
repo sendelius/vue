@@ -11,7 +11,7 @@
     "./dist/theme/init.js"
   ],
   "scripts": {
-    "build": "vite build && node fix-dts.mjs"
+    "build": "vite build && vite build --config vite.theme.config.js && node fix-dts.mjs"
   },
   "exports": {
     ".": {
@@ -19,7 +19,7 @@
       "import": "./dist/index.js"
     },
     "./style": "./dist/style.css",
-    "./theme/init": "./dist/theme/init.js"
+    "./theme/init": "./dist/theme-init.js"
   },
   "repository": {
     "type": "git",
