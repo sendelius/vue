@@ -9,7 +9,7 @@
   "sideEffects": [
     "**/*.css",
     "./dist/theme/init.js"
-  ]
+  ],
   "scripts": {
     "build": "vite build && node fix-dts.mjs"
   },
