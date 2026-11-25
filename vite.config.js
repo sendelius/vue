@@ -31,6 +31,7 @@ const entries = Object.fromEntries([
 ])
 
 export default defineConfig({
+    base: './',
     plugins: [
         vue(),
         libInjectCss(),
@@ -56,6 +57,17 @@ export default defineConfig({
                 'maska',
                 'vue-router',
             ],
+            output: {
+                assetFileNames: (assetInfo) => {
+                    const name = assetInfo.names?.[0] || assetInfo.name || ''
+
+                    if (/\.(woff2?|ttf|otf)$/i.test(name)) {
+                        return 'fonts/[name]-[hash][extname]'
+                    }
+
+                    return 'assets/[name]-[hash][extname]'
+                },
+            },
         },
     }
 })
