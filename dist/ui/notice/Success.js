@@ -66,5 +66,5 @@ var h = { class: "success" }, g = { class: "success-item" }, _ = { class: "succe
 			_: 1
 		}, 8, ["variant"])])) : n("", !0)]));
 	}
-}, [["__scopeId", "data-v-4a83407c"]]);
+}, [["__scopeId", "data-v-869366f9"]]);
 export { x as default };
