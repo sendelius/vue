@@ -1,7 +1,7 @@
 import e from "../form/Checkbox.js";
 import { t } from "../../_plugin-vue_export-helper-Djzt4Yr7.js";
 import { Fragment as n, createCommentVNode as r, createElementBlock as i, createTextVNode as a, createVNode as o, normalizeClass as s, normalizeStyle as c, onBeforeUnmount as l, onMounted as u, openBlock as d, ref as f, renderList as p, renderSlot as m, toDisplayString as h } from "vue";
-import '../../assets/TableItems-C254mxd_.css';// src/ui/table/TableItems.vue
+import '../../TableItems.css';// src/ui/table/TableItems.vue
 var g = ["onMousedown", "onMouseenter"], _ = {
 	key: 1,
 	class: "table-actions"

@@ -1,6 +1,6 @@
 import { t as e } from "../../_plugin-vue_export-helper-Djzt4Yr7.js";
 import { Fragment as t, computed as n, createCommentVNode as r, createElementBlock as i, createElementVNode as a, normalizeClass as o, openBlock as s, ref as c, renderList as l, renderSlot as u, toDisplayString as d, vModelSelect as f, withDirectives as p, withModifiers as m } from "vue";
-import '../../assets/Select-D0tN9-im.css';// src/ui/form/Select.vue
+import '../../Select.css';// src/ui/form/Select.vue
 var h = ["required", "disabled"], g = ["value", "disabled"], _ = {
 	key: 0,
 	class: "label"

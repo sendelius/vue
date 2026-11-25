@@ -1,6 +1,6 @@
 import { t as e } from "../../_plugin-vue_export-helper-Djzt4Yr7.js";
 import { computed as t, createCommentVNode as n, createElementBlock as r, createElementVNode as i, normalizeClass as a, openBlock as o, ref as s, renderSlot as c, toDisplayString as l, vModelDynamic as u, withDirectives as d, withModifiers as f } from "vue";
-import '../../assets/Input-BMdkOY_v.css';// src/ui/form/Input.vue
+import '../../Input.css';// src/ui/form/Input.vue
 var p = [
 	"type",
 	"required",

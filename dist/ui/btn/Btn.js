@@ -1,7 +1,7 @@
 import e from "../progress/Progress.js";
 import { t } from "../../_plugin-vue_export-helper-Djzt4Yr7.js";
 import { computed as n, createBlock as r, createCommentVNode as i, createElementBlock as a, createVNode as o, normalizeClass as s, openBlock as c, renderSlot as l, resolveComponent as u, withCtx as d } from "vue";
-import '../../assets/Btn-DVj1UjlQ.css';// src/ui/btn/Btn.vue
+import '../../Btn.css';// src/ui/btn/Btn.vue
 var f = ["href"], p = /*#__PURE__*/ t({
 	__name: "Btn",
 	props: {

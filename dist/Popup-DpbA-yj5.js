@@ -5,7 +5,7 @@ import r from "./ui/notice/Warning.js";
 import i from "./ui/btn/Btn.js";
 import { t as a } from "./_plugin-vue_export-helper-Djzt4Yr7.js";
 import { Teleport as o, Transition as s, createBlock as c, createCommentVNode as l, createElementBlock as u, createElementVNode as d, createVNode as f, nextTick as p, onBeforeUnmount as m, openBlock as h, ref as g, toDisplayString as _, unref as v, watch as y, withCtx as b, withModifiers as x } from "vue";
-import './assets/Popup-BSnwZy3P.css';// src/ui/popup/usePopup.js
+import './Popup.css';// src/ui/popup/usePopup.js
 var S = g(!1), C = g("popup"), w = g(""), T = g(""), E = g("Подтвердить"), D = g("Отменить"), O = g(""), k = g("gray"), A = g(!0), j = null, M = (e = {}) => (w.value = e.title ?? "", T.value = e.content ?? "", C.value = e.type ?? "popup", S.value = !0, new Promise((e) => {
 	j = e;
 })), N = (e = null) => {

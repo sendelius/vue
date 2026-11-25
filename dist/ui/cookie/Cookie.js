@@ -1,7 +1,7 @@
 import e from "../btn/Btn.js";
 import { t } from "../../_plugin-vue_export-helper-Djzt4Yr7.js";
 import { createCommentVNode as n, createElementBlock as r, createElementVNode as i, createTextVNode as a, createVNode as o, onMounted as s, openBlock as c, ref as l, renderSlot as u, withCtx as d } from "vue";
-import '../../assets/Cookie-caD2-_S6.css';// src/ui/cookie/Cookie.vue
+import '../../Cookie.css';// src/ui/cookie/Cookie.vue
 var f = {
 	key: 0,
 	class: "cookie"

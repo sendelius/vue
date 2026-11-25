@@ -1,7 +1,7 @@
 import e from "../btn/Btn.js";
 import { t } from "../../_plugin-vue_export-helper-Djzt4Yr7.js";
 import { createCommentVNode as n, createElementBlock as r, createElementVNode as i, createTextVNode as a, createVNode as o, onBeforeUnmount as s, onMounted as c, openBlock as l, renderSlot as u, toDisplayString as d, unref as f, useSlots as p, withCtx as m } from "vue";
-import '../../assets/Error-jGzegmrh.css';// src/ui/notice/Error.vue
+import '../../Error.css';// src/ui/notice/Error.vue
 var h = { class: "error" }, g = { class: "error-item" }, _ = { class: "error-icon" }, v = { class: "error-text" }, y = {
 	key: 0,
 	class: "error-title"
