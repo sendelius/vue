@@ -243,25 +243,20 @@ onBeforeUnmount(() => {
 
 <style scoped lang="scss">
 .table-header {
-  --table-header-border: var(--color-gray-blue-medium, #b1b4c7);
-  --table-header-fixed-bg: var(--color-white-blue, #edf1ff);
-  --table-header-fixed-shadow: var(--color-primary-alpha-15, rgba(29, 79, 145, 0.15));
-  --table-header-icon: var(--color-black, #000000);
-  --table-header-sortable-hover: var(--color-primary, #2f80ed);
   height: 35px;
   min-height: 35px;
   display: flex;
-  border-bottom: 1px solid var(--table-header-border);
+  border-bottom: 1px solid var(--snd-table-border);
   .table-header-icon {
     display: block;
-    stroke: var(--table-header-icon);
+    color: var(--snd-text-primary);
   }
   &.fixed {
     position: fixed;
     top: 0;
     z-index: 3;
-    background: var(--table-header-fixed-bg);
-    box-shadow: 0 5px 5px 0 var(--table-header-fixed-shadow);
+    background: var(--snd-table-block-bg);
+    box-shadow: var(--snd-shadow-accent-secondary);
   }
   .table-header-inner {
     height: 35px;
@@ -277,7 +272,7 @@ onBeforeUnmount(() => {
       align-items: center;
       font-weight: bold;
       padding: 4px 10px;
-      border-bottom: 1px solid var(--table-header-border);
+      border-bottom: 1px solid var(--snd-table-border);
       &.table-row__grow {
         flex-grow: 1;
       }
@@ -296,10 +291,9 @@ onBeforeUnmount(() => {
         }
         &:hover {
           cursor: pointer;
-          color: var(--table-header-sortable-hover);
+          color: var(--snd-accent-primary-hover);
           .table-header-icon {
             display: block;
-            stroke: var(--table-header-sortable-hover);
           }
         }
       }

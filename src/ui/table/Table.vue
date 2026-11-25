@@ -141,18 +141,13 @@ onBeforeUnmount(() => {
 
 <style scoped lang="scss">
 .table-wrap {
-  --table-border: var(--color-gray-blue-medium, #b1b4c7);
-  --table-actions-bg: var(--color-white-blue, #edf1ff);
-  --table-actions-shadow: var(--color-primary-alpha-15, rgba(29, 79, 145, 0.15));
-  --table-bulk-bg: var(--color-white-blue, #edf1ff);
-  --table-bulk-shadow: var(--color-primary-alpha-15, rgba(29, 79, 145, 0.15));
   overflow-x: auto;
   margin: 0 -10px;
   width: calc(100% + 20px);
   .table {
     width: fit-content;
     min-width: 100%;
-    border-top: 1px solid var(--table-border);
+    border-top: 1px solid var(--snd-table-border);
   }
 }
 :deep(.table-header),
@@ -165,8 +160,8 @@ onBeforeUnmount(() => {
     top: 0;
     right: 0;
     z-index: 2;
-    background: var(--table-actions-bg);
-    box-shadow: -4px 0 4px 0 var(--table-actions-shadow);
+    background: var(--snd-table-block-bg);
+    box-shadow: var(--snd-shadow-accent-quaternary);
     width: var(--table-actions-width);
     min-width: var(--table-actions-width);
     max-width: var(--table-actions-width);
@@ -181,8 +176,8 @@ onBeforeUnmount(() => {
     top: 0;
     left: 0;
     z-index: 2;
-    background: var(--table-bulk-bg);
-    box-shadow: 4px 0 4px 0 var(--table-bulk-shadow);
+    background: var(--snd-table-block-bg);
+    box-shadow: var(--snd-shadow-accent-tertiary);
     width: var(--table-bulk-width);
     min-width: var(--table-bulk-width);
     max-width: var(--table-bulk-width);

@@ -76,7 +76,7 @@ defineExpose({
     padding: 0 5px;
     border-radius: 8px;
     outline: none;
-    font-size: 12px;
+    font-size: 0.8rem;
     z-index: 3;
     position: relative;
     &:focus {
@@ -130,7 +130,7 @@ defineExpose({
       pointer-events: none;
       align-items: center;
       padding: 0 5px;
-      font-size: 12px;
+      font-size: 0.8rem;
       transition: all .5s;
       display: flex;
       position: absolute;
@@ -146,8 +146,8 @@ defineExpose({
     color: var(--snd-input-error);
     text-align: left;
     padding: 0 7px;
-    font-size: 11px;
-    line-height: 13px;
+    font-size: 0.733rem;
+    line-height: 0.867rem;
   }
 }
 </style>

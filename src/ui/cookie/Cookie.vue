@@ -37,9 +37,12 @@ onMounted(() => {
   justify-content: center;
   border-radius: 10px;
   padding: 10px 20px;
-  font-size: 1.0769rem;
+  font-size: 0.867rem;
   box-shadow: var(--snd-shadow-primary);
   z-index: 100100;
+  :deep(.btn) {
+    font-size: 0.867rem;
+  }
   :deep(a) {
     text-decoration: none;
     color: var(--snd-accent-primary);

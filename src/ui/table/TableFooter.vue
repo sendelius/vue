@@ -180,10 +180,7 @@ onBeforeUnmount(() => {
 
 <style scoped lang="scss">
 .table-footer {
-  --table-footer-bg: var(--color-white-blue, #edf1ff);
-  --table-footer-fixed-shadow: var(--color-primary-alpha-15, rgba(29, 79, 145, 0.15));
-  --table-footer-icon: var(--color-black, #000000);
-  background: var(--table-footer-bg);
+  background: var(--snd-table-block-bg);
   position: relative;
   display: flex;
   flex-wrap: wrap;
@@ -196,7 +193,7 @@ onBeforeUnmount(() => {
   }
   .table-footer-icon {
     display: block;
-    stroke: var(--table-footer-icon);
+    color: var(--snd-text-primary);
   }
   .table-footer-actions__left,
   .table-footer-actions__right {
@@ -232,7 +229,7 @@ onBeforeUnmount(() => {
     z-index: 3;
     position: fixed;
     bottom: 0;
-    box-shadow: 0 -2px 2px 0 var(--table-footer-fixed-shadow);
+    box-shadow: var(--snd-shadow-accent-primary);
     .table-footer-scroll {
       visibility: visible;
     }

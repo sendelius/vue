@@ -93,11 +93,9 @@ onBeforeUnmount(() => {
 
 <style scoped lang="scss">
 .table-item {
-  --table-item-border: var(--color-gray-blue-medium, #b1b4c7);
-  --table-item-hover-bg: var(--color-gray-blue-lightest, #dee2fb);
   min-height: 35px;
   display: flex;
-  border-bottom: 1px solid var(--table-item-border);
+  border-bottom: 1px solid var(--snd-table-border);
   align-items: stretch;
   & > div {
     width: 200px;
@@ -115,10 +113,10 @@ onBeforeUnmount(() => {
   }
   &.table-item__selected,
   &:hover {
-    background: var(--table-item-hover-bg);
+    background: var(--snd-table-items-hover);
     .table-bulk,
     .table-actions {
-      background: var(--table-item-hover-bg);
+      background: var(--snd-table-items-hover);
     }
   }
 }

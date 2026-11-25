@@ -74,15 +74,11 @@ const focusInput = (event) => {
 
 <style scoped lang="scss">
 .table-pagination {
-  --table-pagination-icon: var(--color-black, #000000);
   padding: 0 10px;
   display: flex;
   align-items: center;
   gap: 6px;
-  .table-pagination-icon {
-    display: block;
-    stroke: var(--table-pagination-icon);
-  }
+  color: var(--snd-text-primary);
   :deep(input) {
     text-align: center;
     width: 50px;
