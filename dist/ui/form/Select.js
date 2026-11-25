@@ -72,5 +72,5 @@ var h = ["required", "disabled"], g = ["value", "disabled"], _ = {
 			u(n.$slots, "after", {}, void 0, !0)
 		], 2));
 	}
-}, [["__scopeId", "data-v-60f9f346"]]);
+}, [["__scopeId", "data-v-bd2a71da"]]);
 export { y as default };

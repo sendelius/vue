@@ -65,5 +65,5 @@ var h = [
 			c(t.$slots, "after", {}, void 0, !0)
 		], 2));
 	}
-}, [["__scopeId", "data-v-5152abd6"]]);
+}, [["__scopeId", "data-v-cb874cba"]]);
 export { y as default };
