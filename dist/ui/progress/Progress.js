@@ -1,6 +1,6 @@
 import { t as e } from "../../_plugin-vue_export-helper-Djzt4Yr7.js";
 import { Fragment as t, createCommentVNode as n, createElementBlock as r, createElementVNode as i, createTextVNode as a, openBlock as o, toDisplayString as s } from "vue";
-import '../../Progress.css';// src/ui/progress/Progress.vue
+import '../../assets/Progress-B8_LrV8N.css';// src/ui/progress/Progress.vue
 var c = {
 	key: 0,
 	class: "progress"

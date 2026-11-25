@@ -1,7 +1,7 @@
 import e from "../btn/Btn.js";
 import { t } from "../../_plugin-vue_export-helper-Djzt4Yr7.js";
 import { createElementBlock as n, createElementVNode as r, createTextVNode as i, createVNode as a, onBeforeUnmount as o, onMounted as s, openBlock as c, toDisplayString as l, withCtx as u } from "vue";
-import '../../Confirm.css';// src/ui/popup/Confirm.vue
+import '../../assets/Confirm-BtILjG60.css';// src/ui/popup/Confirm.vue
 var d = { class: "confirm" }, f = { class: "confirm-actions" }, p = /*#__PURE__*/ t({
 	__name: "Confirm",
 	props: {

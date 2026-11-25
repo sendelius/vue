@@ -2,7 +2,7 @@ import e from "../form/Input.js";
 import t from "../btn/Btn.js";
 import { t as n } from "../../_plugin-vue_export-helper-Djzt4Yr7.js";
 import { createBlock as r, createCommentVNode as i, createElementBlock as a, createElementVNode as o, createTextVNode as s, createVNode as c, openBlock as l, renderSlot as u, toDisplayString as d, withCtx as f, withKeys as p } from "vue";
-import '../../TablePagination.css';// src/ui/table/TablePagination.vue
+import '../../assets/TablePagination-twJ3KSdi.css';// src/ui/table/TablePagination.vue
 var m = {
 	key: 0,
 	class: "table-pagination"

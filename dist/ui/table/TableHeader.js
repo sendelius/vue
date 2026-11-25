@@ -1,7 +1,7 @@
 import e from "../form/Checkbox.js";
 import { t } from "../../_plugin-vue_export-helper-Djzt4Yr7.js";
 import { Fragment as n, createCommentVNode as r, createElementBlock as i, createElementVNode as a, createStaticVNode as o, createTextVNode as s, createVNode as c, mergeProps as l, nextTick as u, normalizeClass as d, normalizeStyle as f, onBeforeUnmount as p, onMounted as m, openBlock as h, ref as g, renderList as _, renderSlot as v, toDisplayString as y } from "vue";
-import '../../TableHeader.css';// src/ui/table/TableHeader.vue
+import '../../assets/TableHeader-C12xXHjt.css';// src/ui/table/TableHeader.vue
 var b = ["onClick"], x = { class: "table-row__sortable-title" }, S = "table-sort", C = /*#__PURE__*/ t({
 	__name: "TableHeader",
 	props: {

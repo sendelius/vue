@@ -2,7 +2,7 @@ import e from "./Select.js";
 import t from "./Autocomplete.js";
 import { t as n } from "../../_plugin-vue_export-helper-Djzt4Yr7.js";
 import { computed as r, createElementBlock as i, createElementVNode as a, createTextVNode as o, createVNode as s, openBlock as c, ref as l, toDisplayString as u, watch as d, withCtx as f } from "vue";
-import '../../InputCity.css';// src/ui/form/InputCity.vue
+import '../../assets/InputCity-BSv2lv3Y.css';// src/ui/form/InputCity.vue
 var p = { class: "input-city" }, m = /*#__PURE__*/ n({
 	__name: "InputCity",
 	props: {

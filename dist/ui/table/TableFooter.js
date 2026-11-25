@@ -2,7 +2,7 @@ import e from "../form/Select.js";
 import t from "./TablePagination.js";
 import { t as n } from "../../_plugin-vue_export-helper-Djzt4Yr7.js";
 import { Fragment as r, computed as i, createCommentVNode as a, createElementBlock as o, createElementVNode as s, createVNode as c, nextTick as l, normalizeClass as u, normalizeStyle as d, onBeforeUnmount as f, onMounted as p, openBlock as m, ref as h, renderSlot as g, watch as _, withCtx as v } from "vue";
-import '../../TableFooter.css';// src/ui/table/TableFooter.vue
+import '../../assets/TableFooter-mRcD8bQz.css';// src/ui/table/TableFooter.vue
 var y = {
 	key: 0,
 	class: "table-footer-actions__left"

@@ -1,6 +1,6 @@
 import { t as e } from "../../_plugin-vue_export-helper-Djzt4Yr7.js";
 import { computed as t, createCommentVNode as n, createElementBlock as r, createElementVNode as i, normalizeClass as a, openBlock as o, ref as s, renderSlot as c, toDisplayString as l, unref as u, useSlots as d, vModelCheckbox as f, withDirectives as p, withModifiers as m } from "vue";
-import '../../Checkbox.css';// src/ui/form/Checkbox.vue
+import '../../assets/Checkbox-CTiqKo4j.css';// src/ui/form/Checkbox.vue
 var h = [
 	"value",
 	"required",

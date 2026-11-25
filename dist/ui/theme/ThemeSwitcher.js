@@ -1,6 +1,6 @@
 import { t as e } from "../../_plugin-vue_export-helper-Djzt4Yr7.js";
 import { createElementBlock as t, createElementVNode as n, createStaticVNode as r, onMounted as i, openBlock as a, ref as o } from "vue";
-import '../../ThemeSwitcher.css';// src/ui/theme/ThemeSwitcher.vue
+import '../../assets/ThemeSwitcher-faHbGAu5.css';// src/ui/theme/ThemeSwitcher.vue
 var s = { class: "theme-switcher" }, c = ["aria-pressed"], l = ["width", "height"], u = ["aria-pressed"], d = ["width", "height"], f = /*#__PURE__*/ e({
 	__name: "ThemeSwitcher",
 	props: { iconSize: {

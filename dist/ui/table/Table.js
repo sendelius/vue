@@ -3,7 +3,7 @@ import t from "./TableHeader.js";
 import n from "./TableItems.js";
 import { t as r } from "../../_plugin-vue_export-helper-Djzt4Yr7.js";
 import { createElementBlock as i, createElementVNode as a, createSlots as o, createVNode as s, guardReactiveProps as c, nextTick as l, normalizeProps as u, normalizeStyle as d, onBeforeUnmount as f, onMounted as p, openBlock as m, ref as h, renderList as g, renderSlot as _, toDisplayString as v, watch as y, withCtx as b } from "vue";
-import '../../Table.css';// src/ui/table/Table.vue
+import '../../assets/Table-PbnS3-U6.css';// src/ui/table/Table.vue
 var x = {
 	key: 1,
 	class: "table-empty"

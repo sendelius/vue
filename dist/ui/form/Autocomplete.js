@@ -2,7 +2,7 @@ import e from "./Input.js";
 import t from "../progress/Progress.js";
 import { t as n } from "../../_plugin-vue_export-helper-Djzt4Yr7.js";
 import { Fragment as r, Teleport as i, createBlock as a, createCommentVNode as o, createElementBlock as s, createTextVNode as c, createVNode as l, nextTick as u, normalizeClass as d, normalizeStyle as f, onBeforeUnmount as p, onMounted as m, openBlock as h, ref as g, renderList as _, renderSlot as v, watch as y, withCtx as b, withModifiers as x } from "vue";
-import '../../Autocomplete.css';// src/ui/form/Autocomplete.vue
+import '../../assets/Autocomplete-CaJT1bSU.css';// src/ui/form/Autocomplete.vue
 var S = ["onMousedown"], C = {
 	key: 0,
 	class: "autocomplete-empty"

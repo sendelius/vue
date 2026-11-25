@@ -1,7 +1,7 @@
 import e from "./Input.js";
 import { t } from "../../_plugin-vue_export-helper-Djzt4Yr7.js";
 import { computed as n, createBlock as r, createElementVNode as i, openBlock as a, ref as o, renderSlot as s, vShow as c, withCtx as l, withDirectives as u, withModifiers as d } from "vue";
-import '../../InputPassword.css';// src/ui/form/InputPassword.vue
+import '../../assets/InputPassword-pxH4E4bi.css';// src/ui/form/InputPassword.vue
 var f = { class: "input-password-control" }, p = /*#__PURE__*/ t({
 	__name: "InputPassword",
 	props: {

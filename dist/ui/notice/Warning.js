@@ -1,7 +1,7 @@
 import e from "../btn/Btn.js";
 import { t } from "../../_plugin-vue_export-helper-Djzt4Yr7.js";
 import { createCommentVNode as n, createElementBlock as r, createElementVNode as i, createTextVNode as a, createVNode as o, onBeforeUnmount as s, onMounted as c, openBlock as l, renderSlot as u, toDisplayString as d, unref as f, useSlots as p, withCtx as m } from "vue";
-import '../../Warning.css';// src/ui/notice/Warning.vue
+import '../../assets/Warning-Dfn1M8mB.css';// src/ui/notice/Warning.vue
 var h = { class: "warning" }, g = { class: "warning-item" }, _ = { class: "warning-icon" }, v = ["innerHTML"], y = {
 	key: 1,
 	class: "warning-text"
