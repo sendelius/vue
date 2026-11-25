@@ -45,41 +45,6 @@ const classes = computed(() => [{
 
 <style scoped lang="scss">
 .btn {
-  // outline
-  --btn-outline-color: var(--color-black, #000000);
-  --btn-outline-border: var(--color-primary, #2f80ed);
-  --btn-outline-icon: var(--color-black, #000000);
-  --btn-outline-hover-border: var(--color-primary-hover, #276fcf);
-  --btn-outline-hover-color: var(--color-primary-hover, #276fcf);
-  --btn-outline-hover-icon: var(--color-primary-hover, #276fcf);
-  // gray
-  --btn-gray-color: var(--color-black, #000000);
-  --btn-gray-bg: var(--color-gray-blue-lighter, #9299c3);
-  --btn-gray-icon: var(--color-black, #000000);
-  --btn-gray-hover-bg: var(--color-gray-blue-medium, #b1b4c7);
-  // red
-  --btn-red-color: var(--color-white, #ffffff);
-  --btn-red-bg: var(--color-red, #c10d18);
-  --btn-red-icon: var(--color-white, #ffffff);
-  --btn-red-hover-bg: var(--color-red-medium, #9c060f);
-  // green
-  --btn-green-color: var(--color-white, #ffffff);
-  --btn-green-bg: var(--color-green, #06a76a);
-  --btn-green-icon: var(--color-white, #ffffff);
-  --btn-green-hover-bg: var(--color-green-dark, #05774c);
-  // hover-blue
-  --btn-hover-blue-color: var(--color-white, #ffffff);
-  --btn-hover-blue-bg: var(--color-primary, #2f80ed);
-  --btn-hover-blue-icon: var(--color-white, #ffffff);
-  // hover-red
-  --btn-hover-red-color: var(--color-white, #ffffff);
-  --btn-hover-red-bg: var(--color-red, #c10d18);
-  --btn-hover-red-icon: var(--color-white, #ffffff);
-  // hover-green
-  --btn-hover-green-color: var(--color-white, #ffffff);
-  --btn-hover-green-bg: var(--color-green, #06a76a);
-  --btn-hover-green-icon: var(--color-white, #ffffff);
-
   color: var(--snd-btn-color);
   background: var(--snd-accent-primary);
   border-radius: 8px;
@@ -117,121 +82,70 @@ const classes = computed(() => [{
     }
   }
   &.btn-outline {
-    color: var(--btn-outline-color);
-    border-color: var(--btn-outline-border);
+    color: var(--snd-text-primary);
+    border-color: var(--snd-accent-primary);
     background: none;
-    :deep(.icon).icon-fill {
-      fill: var(--btn-outline-icon);
-    }
-    :deep(.icon).icon-stroke {
-      stroke: var(--btn-outline-icon);
-    }
     :deep(.progress) {
       --snd-progress: var(--snd-accent-primary);
     }
     &:hover {
       background: none;
-      border-color: var(--btn-outline-hover-border);
-      color: var(--btn-outline-hover-color);
-      :deep(.icon).icon-fill {
-        fill: var(--btn-outline-hover-icon);
-      }
-      :deep(.icon).icon-stroke {
-        stroke: var(--btn-outline-hover-icon);
-      }
+      border-color: var(--snd-accent-primary-hover);
+      color: var(--snd-accent-primary-hover);
     }
   }
   &.btn-gray {
-    color: var(--btn-gray-color);
-    border-color: var(--btn-gray-bg);
-    background: var(--btn-gray-bg);
-    :deep(.icon).icon-fill {
-      fill: var(--btn-gray-icon);
-    }
-    :deep(.icon).icon-stroke {
-      stroke: var(--btn-gray-icon);
-    }
+    color: var(--snd-text-primary);
+    border-color: var(--snd-btn-gray);
+    background: var(--snd-btn-gray);
     :deep(.progress) {
-      --snd-progress: var(--btn-progress-primary);
+      --snd-progress: var(--snd-accent-primary);
     }
     &:hover {
-      background: var(--btn-gray-hover-bg);
-      border-color: var(--btn-gray-hover-bg);
+      opacity: 0.8;
     }
   }
   &.btn-red {
-    color: var(--btn-red-color);
-    border-color: var(--btn-red-bg);
-    background: var(--btn-red-bg);
-    :deep(.icon).icon-fill {
-      fill: var(--btn-red-icon);
-    }
-    :deep(.icon).icon-stroke {
-      stroke: var(--btn-red-icon);
-    }
+    color: var(--snd-text-white);
+    border-color: var(--snd-btn-red);
+    background: var(--snd-btn-red);
     &:hover {
-      background: var(--btn-red-hover-bg);
-      border-color: var(--btn-red-hover-bg);
+      opacity: 0.8;
     }
   }
   &.btn-green {
-    color: var(--btn-green-color);
-    border-color: var(--btn-green-bg);
-    background: var(--btn-green-bg);
-    :deep(.icon).icon-fill {
-      fill: var(--btn-green-icon);
-    }
-    :deep(.icon).icon-stroke {
-      stroke: var(--btn-green-icon);
-    }
+    color: var(--snd-text-white);
+    border-color: var(--snd-btn-green);
+    background: var(--snd-btn-green);
     &:hover {
-      background: var(--btn-green-hover-bg);
-      border-color: var(--btn-green-hover-bg);
+      opacity: 0.8;
     }
   }
   &.btn-outline.btn-hover-blue,
   &.btn-gray.btn-hover-blue,
   &.btn-hover-blue {
     &:hover {
-      color: var(--btn-hover-blue-color);
-      background: var(--btn-hover-blue-bg);
-      border-color: var(--btn-hover-blue-bg);
-      :deep(.icon).icon-fill {
-        fill: var(--btn-hover-blue-icon);
-      }
-      :deep(.icon).icon-stroke {
-        stroke: var(--btn-hover-blue-icon);
-      }
+      color: var(--snd-text-white);
+      background: var(--snd-accent-primary);
+      border-color: var(--snd-accent-primary);
     }
   }
   &.btn-outline.btn-hover-red,
   &.btn-gray.btn-hover-red,
   &.btn-hover-red {
     &:hover {
-      color: var(--btn-hover-red-color);
-      background: var(--btn-hover-red-bg);
-      border-color: var(--btn-hover-red-bg);
-      :deep(.icon).icon-fill {
-        fill: var(--btn-hover-red-icon);
-      }
-      :deep(.icon).icon-stroke {
-        stroke: var(--btn-hover-red-icon);
-      }
+      color: var(--snd-text-white);
+      background: var(--snd-btn-red);
+      border-color: var(--snd-btn-red);
     }
   }
   &.btn-outline.btn-hover-green,
   &.btn-gray.btn-hover-green,
   &.btn-hover-green {
     &:hover {
-      color: var(--btn-hover-green-color);
-      background: var(--btn-hover-green-bg);
-      border-color: var(--btn-hover-green-bg);
-      :deep(.icon).icon-fill {
-        fill: var(--btn-hover-green-icon);
-      }
-      :deep(.icon).icon-stroke {
-        stroke: var(--btn-hover-green-icon);
-      }
+      color: var(--snd-text-white);
+      background: var(--snd-btn-green);
+      border-color: var(--snd-btn-green);
     }
   }
 }

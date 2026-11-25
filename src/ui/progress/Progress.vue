@@ -22,7 +22,7 @@ const props = defineProps({
     min-width: 15px;
     width: 15px;
     height: 15px;
-    border: 2px solid var(--snf-progress);
+    border: 2px solid var(--snd-progress);
     border-bottom-color: transparent;
     border-radius: 50%;
     display: inline-block;

@@ -71,23 +71,19 @@ onBeforeUnmount(() => {
 
 <style scoped lang="scss">
 .error {
-  --notice-error-color: var(--color-black, #000000);
-  --notice-error-bg: var(--color-gray-blue-lightest, #dee2fb);
-  --notice-error-border: var(--color-red, #c10d18);
-  --notice-error-icon: var(--color-red, #c10d18);
   .error-item {
     display: flex;
     align-items: center;
     gap: 10px;
-    background: var(--notice-error-bg);
+    background: var(--snd-notice-bg);
     padding: 10px;
-    border-left: 3px solid var(--notice-error-border);
+    border-left: 3px solid var(--snd-notice-red);
     border-radius: 8px;
-    .error-icon svg {
-      stroke: var(--notice-error-icon);
+    .success-icon svg {
+      color: var(--snd-notice-green);
     }
     .error-text {
-      color: var(--notice-error-color);
+      color: var(--snd-text-white);
       font-size: 1.0769rem;
       line-height: 1.3846rem;
       .error-title {

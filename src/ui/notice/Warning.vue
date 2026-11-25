@@ -64,23 +64,19 @@ onBeforeUnmount(() => {
 
 <style scoped lang="scss">
 .warning {
-  --notice-warning-color: var(--color-black, #000000);
-  --notice-warning-bg: var(--color-gray-blue-lightest, #dee2fb);
-  --notice-warning-border: var(--color-red, #c10d18);
-  --notice-warning-icon: var(--color-red, #c10d18);
   .warning-item {
     display: flex;
     align-items: center;
     gap: 10px;
-    background: var(--notice-warning-bg);
+    background: var(--snd-notice-bg);
     padding: 10px;
-    border-left: 3px solid var(--notice-warning-border);
+    border-left: 3px solid var(--snd-notice-red);
     border-radius: 8px;
     .warning-icon svg {
-      stroke: var(--notice-warning-icon);
+      color: var(--snd-notice-red);
     }
     .warning-text {
-      color: var(--notice-warning-color);
+      color: var(--snd-text-white);
       font-weight: 600;
       font-size: 1.0769rem;
       line-height: 1.3846rem;

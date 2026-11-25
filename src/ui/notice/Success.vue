@@ -63,23 +63,19 @@ onBeforeUnmount(() => {
 
 <style scoped lang="scss">
 .success {
-  --notice-success-color: var(--color-black, #000000);
-  --notice-success-bg: var(--color-gray-blue-lightest, #dee2fb);
-  --notice-success-border: var(--color-green, #06a76a);
-  --notice-success-icon: var(--color-green, #06a76a);
   .success-item {
     display: flex;
     align-items: center;
     gap: 10px;
-    background: var(--notice-success-bg);
+    background: var(--snd-notice-bg);
     padding: 10px;
-    border-left: 3px solid var(--notice-success-border);
+    border-left: 3px solid var(--snd-notice-green);
     border-radius: 8px;
     .success-icon svg {
-      stroke: var(--notice-success-icon);
+      color: var(--snd-notice-green);
     }
     .success-text {
-      color: var(--notice-success-color);
+      color: var(--snd-text-white);
       font-weight: 600;
       font-size: 1.0769rem;
       line-height: 1.3846rem;
