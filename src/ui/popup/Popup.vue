@@ -115,27 +115,25 @@ const onOverlayClick = () => {
 
 <style scoped lang="scss">
 .popup-wrap {
-  --popup-bg: var(--color-white-blue, #edf1ff);
-  --popup-bg-overflow: var(--color-black-alpha-50, rgba(0, 0, 0, 0.50));
-  --popup-bg-shadow: var(--color-black-alpha-25, rgba(0, 0, 0, 0.25));
   position: fixed;
   inset: 0;
   z-index: 100500;
   display: flex;
   align-items: flex-start;
   justify-content: center;
-  background: var(--popup-bg-overflow);
+  background: var(--snd-popup-overflow);
   padding: 20px;
   overflow: auto;
   .popup {
     position: relative;
     width: 100%;
     max-width: 600px;
-    background: var(--popup-bg);
+    background: var(--snd-popup);
     border-radius: 10px;
-    box-shadow: 0 10px 40px var(--popup-bg-shadow);
+    box-shadow: 0 10px 40px var(--snd-popup-shadow);
     padding: 20px;
     .popup-title {
+      color: var(--snd-text-primary);
       margin-bottom: 10px;
       font-size: 1.3846rem;
       font-weight: 600;

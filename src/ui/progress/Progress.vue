@@ -14,7 +14,6 @@ const props = defineProps({
 
 <style scoped lang="scss">
 .progress {
-  --progress-border: var(--color-primary, #2f80ed);
   display: flex;
   align-items: center;
   gap: 6px;
@@ -22,7 +21,7 @@ const props = defineProps({
     min-width: 15px;
     width: 15px;
     height: 15px;
-    border: 2px solid var(--progress-border);
+    border: 2px solid var(--snd-accent-primary);
     border-bottom-color: transparent;
     border-radius: 50%;
     display: inline-block;

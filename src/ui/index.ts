@@ -22,3 +22,5 @@ export {usePopup} from './popup/usePopup'
 export {default as SndProgress} from './progress/Progress.vue'
 // table
 export {default as SndTable} from './table/Table.vue'
+// theme
+export {default as SndThemeSwitcher} from './theme/ThemeSwitcher.vue'
