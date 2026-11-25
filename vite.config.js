@@ -26,7 +26,7 @@ function getComponents(dir) {
 const entries = Object.fromEntries([
     ['index', resolve(root, 'src/index.ts')],
     ['style', resolve(root, 'src/style/index.scss')],
-    ['theme/init', resolve(root, 'src/ui/theme/init.js')],
+    ['theme/init', resolve(root, 'src/theme/init.js')],
     ...getComponents(ui)
 ])
 
