@@ -83,7 +83,7 @@ onBeforeUnmount(() => {
       color: var(--snd-notice-green);
     }
     .error-text {
-      color: var(--snd-text-white);
+      color: var(--snd-text-primary);
       font-size: 1.0769rem;
       line-height: 1.3846rem;
       .error-title {
