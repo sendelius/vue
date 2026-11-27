@@ -13,12 +13,6 @@ body {
   min-height: 100vh;
   background: var(--snd-background);
   color: var(--snd-text-secondary);
-  &.isLoaded {
-    transition: background linear .2s, background-color linear .2s, color linear .2s, border-color linear .2s, fill linear .2s, stroke linear .2s;
-    * {
-      transition: background linear .2s, background-color linear .2s, color linear .2s, border-color linear .2s, fill linear .2s, stroke linear .2s;
-    }
-  }
   &.noScroll {
     overflow: hidden;
   }
@@ -44,10 +38,10 @@ strong {
 }
 a:not(.btn) {
   text-decoration: none;
-  color: var(--snd-accent-primary);
+  color: var(--snd-links);
   font-weight: 500;
   &:hover {
-    color: var(--snd-accent-primary-hover);
+    color: var(--snd-links-hover);
     text-decoration: underline;
   }
 }

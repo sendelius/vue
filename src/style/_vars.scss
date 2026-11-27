@@ -13,6 +13,8 @@
     --snd-accent-primary: #266ccb;
     --snd-accent-primary-hover: #205cae;
     --snd-accent-primary-dark: #1c4d8f;
+    --snd-links: var(--snd-accent-primary);
+    --snd-links-hover: var(--snd-accent-primary-hover);
     --snd-scrollbar: var(--snd-scrollbar-light);
     --snd-shadow-primary: 0 12px 32px 0 rgba(37, 23, 121, .06);
     --snd-shadow-secondary: 0 8px 24px rgba(0, 0, 0, .08);
@@ -47,6 +49,8 @@
     --snd-accent-primary: #2568c2;
     --snd-accent-primary-hover: #1d57a5;
     --snd-accent-primary-dark: #1d539c;
+    --snd-links: #4695ff;
+    --snd-links-hover: #317de3;
     --snd-scrollbar: var(--snd-scrollbar-dark);
     --snd-shadow-primary: 0 12px 32px 0 rgba(0, 0, 0, 0.15);
     --snd-shadow-secondary: 0 8px 24px rgba(0, 0, 0, .08);
@@ -61,14 +65,14 @@
     --snd-popup-overflow: rgba(17, 20, 36, 0.50);
     --snd-btn-color: #ffffff;
     --snd-btn-gray: #1e3452;
-    --snd-btn-red: #c10d18;
+    --snd-btn-red: #e11521;
     --snd-btn-green: #06a76a;
     --snd-notice-bg: #1e3452;
-    --snd-notice-red: #c10d18;
+    --snd-notice-red: #e11521;
     --snd-notice-green: #06a76a;
     --snd-input: #162740;
     --snd-input-border: #1e3452;
-    --snd-input-error: #c10d18;
+    --snd-input-error: #e11521;
     --snd-input-label: #223b5e;
     --snd-table-border: #1e3452;
     --snd-table-items-hover: #223b5e;

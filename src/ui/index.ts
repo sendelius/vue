@@ -24,3 +24,6 @@ export {default as SndProgress} from './progress/Progress.vue'
 export {default as SndTable} from './table/Table.vue'
 // theme
 export {default as SndThemeSwitcher} from './theme/ThemeSwitcher.vue'
+// preloader
+export {default as SndPreloader} from './preloader/Preloader.vue'
+export {default as preloader} from './preloader'

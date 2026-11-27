@@ -45,9 +45,8 @@ onMounted(() => {
   }
   :deep(a) {
     text-decoration: none;
-    color: var(--snd-accent-primary);
     &:hover {
-      color: var(--snd-accent-primary-hover);
+      text-decoration: none;
     }
   }
   button {

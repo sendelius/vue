@@ -1,0 +1,23 @@
+body {
+  &.isLoading {
+    overflow: hidden;
+    &::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      z-index: 99999;
+      background: var(--snd-background);
+    }
+  }
+  &.isLoaded {
+    transition: background linear .2s, background-color linear .2s, color linear .2s, border-color linear .2s, fill linear .2s, stroke linear .2s;
+    * {
+      transition: background linear .2s, background-color linear .2s, color linear .2s, border-color linear .2s, fill linear .2s, stroke linear .2s;
+    }
+    &::before {
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity .3s ease;
+    }
+  }
+}

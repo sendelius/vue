@@ -8,7 +8,7 @@ const props = defineProps({
 <template>
   <div v-if="show" class="progress">
     <template v-if="label">{{ label }} ...</template>
-    <span class="progress-loader"/>
+    <span class="progress__spinner"/>
   </div>
 </template>
 
@@ -18,24 +18,26 @@ const props = defineProps({
   display: flex;
   align-items: center;
   gap: 6px;
-  .progress-loader {
+  &__spinner {
     min-width: 15px;
     width: 15px;
     height: 15px;
-    border: 2px solid var(--snd-progress);
-    border-bottom-color: transparent;
+    border: 3px solid transparent;
+    border-top-color: var(--snd-progress);
     border-radius: 50%;
     display: inline-block;
     box-sizing: border-box;
-    animation: sndProgressRotate 1s linear infinite;
+    animation: progress-spin .7s linear infinite;
   }
 }
-@keyframes sndProgressRotate {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
+@keyframes progress-spin {
+  to {
     transform: rotate(360deg);
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .progress__spinner {
+    animation-duration: 2s;
   }
 }
 </style>
