@@ -17,7 +17,7 @@ var c = {
 		}
 	},
 	setup(e) {
-		return (l, u) => e.show ? (o(), r("div", c, [e.label ? (o(), r(t, { key: 0 }, [a(s(e.label) + " ...", 1)], 64)) : n("", !0), u[0] ||= i("span", { class: "progress-loader" }, null, -1)])) : n("", !0);
+		return (l, u) => e.show ? (o(), r("div", c, [e.label ? (o(), r(t, { key: 0 }, [a(s(e.label) + " ...", 1)], 64)) : n("", !0), u[0] ||= i("span", { class: "progress__spinner" }, null, -1)])) : n("", !0);
 	}
-}, [["__scopeId", "data-v-f2a36022"]]);
+}, [["__scopeId", "data-v-c790b17f"]]);
 export { l as default };

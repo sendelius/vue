@@ -16,3 +16,5 @@ export { usePopup } from './popup/usePopup';
 export { default as SndProgress } from './progress/Progress.vue';
 export { default as SndTable } from './table/Table.vue';
 export { default as SndThemeSwitcher } from './theme/ThemeSwitcher.vue';
+export { default as SndPreloader } from './preloader/Preloader.vue';
+export { default as preloader } from './preloader';

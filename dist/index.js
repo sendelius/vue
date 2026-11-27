@@ -15,11 +15,12 @@ import p from "./ui/notice/Success.js";
 import { n as m, t as h } from "./Popup-DpbA-yj5.js";
 import g from "./ui/table/Table.js";
 import _ from "./ui/theme/ThemeSwitcher.js";
-import v from "axios";
-import { defineStore as y } from "pinia";
-import { ref as b } from "vue";
+import { n as v, t as y } from "./Preloader-MeT5gdWq.js";
+import b from "axios";
+import { defineStore as x } from "pinia";
+import { ref as S } from "vue";
 // src/config/config.js
-var x = {
+var C = {
 	router: null,
 	api: { default: "" },
 	endpoints: {
@@ -45,13 +46,13 @@ var x = {
 		onUnauthorized: null,
 		onLogout: null
 	}
-}, S = (e = {}) => {
-	x = {
-		...x,
+}, w = (e = {}) => {
+	C = {
+		...C,
 		...e
 	};
-}, C = () => x, w = {}, T = () => {
-	let e = C(), t = {
+}, T = () => C, E = {}, D = () => {
+	let e = T(), t = {
 		withCredentials: !0,
 		headers: {
 			"Content-Type": "application/json",
@@ -59,16 +60,16 @@ var x = {
 		}
 	};
 	return Object.entries(e.api).forEach(([e, n]) => {
-		w[e] = v.create({
+		E[e] = b.create({
 			...t,
 			baseURL: n
 		});
-	}), w;
-}, E = (e = "default") => {
-	let t = w[e] || w.default;
+	}), E;
+}, O = (e = "default") => {
+	let t = E[e] || E.default;
 	if (!t) throw Error("@sendelius/vue: API-клиенты не инициализированы. Вызови initApi().");
 	return t;
-}, D = class extends Error {
+}, k = class extends Error {
 	constructor({ status: e = null, data: t = null } = {}) {
 		let n = t?.error, r = {
 			code: n?.code ?? "UNKNOWN_ERROR",
@@ -79,8 +80,8 @@ var x = {
 	}
 };
 // src/api/requests.js
-async function O(e, t, n = {}, r = {}, i = "default") {
-	let a = E(i), o;
+async function A(e, t, n = {}, r = {}, i = "default") {
+	let a = O(i), o;
 	try {
 		o = e === "get" ? await a.get(t, {
 			params: n,
@@ -90,30 +91,30 @@ async function O(e, t, n = {}, r = {}, i = "default") {
 			...r
 		}) : await a[e](t, n, r);
 	} catch (e) {
-		throw e.response?.status === 401 && C().callbacks.onUnauthorized?.(), new D({
+		throw e.response?.status === 401 && T().callbacks.onUnauthorized?.(), new k({
 			status: e.response?.status ?? null,
 			data: e.response?.data ?? null
 		});
 	}
 	let s = o.data;
-	if (s?.status !== "success") throw new D({
+	if (s?.status !== "success") throw new k({
 		status: o.status,
 		data: s
 	});
 	return s;
 }
-function k(e = "default") {
+function j(e = "default") {
 	return {
-		get: (t, n = {}, r = {}) => O("get", t, n, r, e),
-		post: (t, n = {}, r = {}) => O("post", t, n, r, e),
-		put: (t, n = {}, r = {}) => O("put", t, n, r, e),
-		patch: (t, n = {}, r = {}) => O("patch", t, n, r, e),
-		remove: (t, n = {}, r = {}) => O("delete", t, n, r, e),
-		request: (t, n, r = {}, i = {}) => O(t, n, r, i, e)
+		get: (t, n = {}, r = {}) => A("get", t, n, r, e),
+		post: (t, n = {}, r = {}) => A("post", t, n, r, e),
+		put: (t, n = {}, r = {}) => A("put", t, n, r, e),
+		patch: (t, n = {}, r = {}) => A("patch", t, n, r, e),
+		remove: (t, n = {}, r = {}) => A("delete", t, n, r, e),
+		request: (t, n, r = {}, i = {}) => A(t, n, r, i, e)
 	};
 }
 // src/auth/auth.js
-var { get: A, post: j, remove: M } = k("auth"), N = y("auth", {
+var { get: M, post: N, remove: P } = j("auth"), F = x("auth", {
 	state: () => ({
 		user: {},
 		avatar: {
@@ -128,7 +129,7 @@ var { get: A, post: j, remove: M } = k("auth"), N = y("auth", {
 		async init(e = !0) {
 			if (this.isInit && e) return this.isAuth;
 			try {
-				let e = await A(C().endpoints.auth.me);
+				let e = await M(T().endpoints.auth.me);
 				e?.user ? (this.user = e.user, this.avatar = e.user.avatar ?? this.avatar, this.isAuth = !0) : this.clear();
 			} catch {
 				this.clear();
@@ -140,24 +141,24 @@ var { get: A, post: j, remove: M } = k("auth"), N = y("auth", {
 		async login(e, t, n) {
 			n ||= "";
 			try {
-				await j(C().endpoints.auth.login, {
+				await N(T().endpoints.auth.login, {
 					login: e,
 					password: t,
 					captcha: n
 				}), await this.init(!1);
-				let r = C().router;
-				return r && await r.push(C().redirects.afterLogin), !0;
+				let r = T().router;
+				return r && await r.push(T().redirects.afterLogin), !0;
 			} catch (e) {
 				throw e;
 			}
 		},
 		async logout() {
 			try {
-				await M(C().endpoints.auth.logout);
+				await P(T().endpoints.auth.logout);
 			} finally {
-				this.clear(), C().callbacks.onLogout?.();
-				let e = C().router;
-				e && await e.push(C().redirects.afterLogout);
+				this.clear(), T().callbacks.onLogout?.();
+				let e = T().router;
+				e && await e.push(T().redirects.afterLogout);
 			}
 		},
 		clear() {
@@ -169,61 +170,61 @@ var { get: A, post: j, remove: M } = k("auth"), N = y("auth", {
 		}
 	}
 });
-function P() {
-	return N();
+function I() {
+	return F();
 }
 // src/captcha/captcha.js
-var { get: F, post: I } = k("auth");
-async function L() {
-	let e = await R(), t = await B(e.challenge);
-	return z(e.id, t);
+var { get: L, post: R } = j("auth");
+async function z() {
+	let e = await B(), t = await H(e.challenge);
+	return V(e.id, t);
 }
-async function R() {
-	return F(C().endpoints.captcha.challenge);
+async function B() {
+	return L(T().endpoints.captcha.challenge);
 }
-async function z(e, t) {
-	return (await I(C().endpoints.captcha.verify, {
+async function V(e, t) {
+	return (await R(T().endpoints.captcha.verify, {
 		id: e,
 		nonce: t
 	}))?.token;
 }
-async function B(e) {
+async function H(e) {
 	let t = "0".repeat(4), n = 0;
 	for (;;) {
-		if ((await V(`${e}:${n}`)).startsWith(t)) return n;
+		if ((await U(`${e}:${n}`)).startsWith(t)) return n;
 		n++;
 	}
 }
-async function V(e) {
+async function U(e) {
 	let t = new TextEncoder().encode(e), n = await crypto.subtle.digest("SHA-256", t);
 	return Array.from(new Uint8Array(n)).map((e) => e.toString(16).padStart(2, "0")).join("");
 }
 // src/captcha/store.js
-var H = y("captcha", () => {
-	let e = b(""), t = b(!1), n = b(!1), r = null;
+var W = x("captcha", () => {
+	let e = S(""), t = S(!1), n = S(!1), r = null;
 	return {
 		token: e,
 		isInit: t,
 		isLoading: n,
-		init: async () => t.value ? e.value : r || (n.value = !0, r = L().then((n) => (e.value = n, t.value = !0, n)).finally(() => {
+		init: async () => t.value ? e.value : r || (n.value = !0, r = z().then((n) => (e.value = n, t.value = !0, n)).finally(() => {
 			n.value = !1, r = null;
 		}), r)
 	};
 });
-function U() {
-	return H();
+function G() {
+	return W();
 }
 // src/helpers/declension.js
-function W(e, t, n, r) {
+function K(e, t, n, r) {
 	let i = Math.abs(e) % 100, a = i % 10, o;
 	return o = i >= 11 && i <= 19 ? r : a === 1 ? t : a >= 2 && a <= 4 ? n : r, `${e} ${o}`;
 }
 // src/helpers/title.js
-function G(e, t, n) {
-	t ??= C().title.default, n ??= C().title.separator, t || (n = ""), document.title = e ? `${e}${n}${t}` : t;
+function q(e, t, n) {
+	t ??= T().title.default, n ??= T().title.separator, t || (n = ""), document.title = e ? `${e}${n}${t}` : t;
 }
 // src/helpers/objects.js
-function K(e) {
+function J(e) {
 	return Array.isArray(e) ? e.length === 0 : e && typeof e == "object" ? Object.keys(e).length === 0 : !0;
 }
-export { D as ApiError, i as SndAutocomplete, t as SndBtn, u as SndCheckbox, n as SndCookie, f as SndError, r as SndInput, s as SndInputCity, c as SndInputDate, l as SndInputPassword, a as SndInputPhone, h as SndPopup, e as SndProgress, o as SndSelect, p as SndSuccess, g as SndTable, _ as SndThemeSwitcher, d as SndWarning, S as configure, W as declension, E as getClient, C as getConfig, T as initApi, K as isEmpty, G as setTitle, k as useApi, P as useAuth, U as useCaptcha, m as usePopup };
+export { k as ApiError, i as SndAutocomplete, t as SndBtn, u as SndCheckbox, n as SndCookie, f as SndError, r as SndInput, s as SndInputCity, c as SndInputDate, l as SndInputPassword, a as SndInputPhone, h as SndPopup, y as SndPreloader, e as SndProgress, o as SndSelect, p as SndSuccess, g as SndTable, _ as SndThemeSwitcher, d as SndWarning, w as configure, K as declension, O as getClient, T as getConfig, D as initApi, J as isEmpty, v as preloader, q as setTitle, j as useApi, I as useAuth, G as useCaptcha, m as usePopup };
